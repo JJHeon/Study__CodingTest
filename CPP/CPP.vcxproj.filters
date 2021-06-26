@@ -24,8 +24,8 @@
     <ClCompile Include="Template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Start.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="12100.cpp">
+      <Filter>Source Files\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
