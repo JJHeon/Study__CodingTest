@@ -12,3 +12,4 @@
 #define	__BACKJOON_14501__	0		//21.02.06	//퇴사
 #define	__BACKJOON_14502__	0		//21.02.07	//연구소
 #define	__BACKJOON_14503__	0		//21.02.07	//로봇 청소기
+#define	__BACKJOON_14888__	0		//21.02.07	//연산자 끼워넣기
