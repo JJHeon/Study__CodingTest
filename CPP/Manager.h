@@ -16,3 +16,4 @@
 #define	__BACKJOON_14889__	0		//21.02.08	//스타트와 링크
 #define	__BACKJOON_14890__	0		//21.02.09	//경사로
 #define	__BACKJOON_14891__	0		//21.02.09	//톱니바퀴
+#define	__BACKJOON_15683__	0		//21.02.11	//감시
