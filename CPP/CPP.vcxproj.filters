@@ -33,6 +33,9 @@
     <ClCompile Include="13458.cpp">
       <Filter>Source Files\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="14499.cpp">
+      <Filter>Source Files\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Manager.h">
