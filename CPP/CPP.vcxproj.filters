@@ -42,6 +42,9 @@
     <ClCompile Include="14501.cpp">
       <Filter>Source Files\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="14502.cpp">
+      <Filter>Source Files\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Manager.h">

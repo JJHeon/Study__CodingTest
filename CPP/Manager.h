@@ -10,3 +10,4 @@
 #define	__BACKJOON_14499__	0		//21.02.02	//주사위 굴리기
 #define	__BACKJOON_14500__	0		//21.02.04	//테트로미노
 #define	__BACKJOON_14501__	0		//21.02.06	//퇴사
+#define	__BACKJOON_14502__	0		//21.02.07	//연구소
