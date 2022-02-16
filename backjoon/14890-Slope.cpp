@@ -8,7 +8,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14890__	1		//21.02.09	//경사로
 
 #if __BACKJOON_14890__
 //2 - 참고

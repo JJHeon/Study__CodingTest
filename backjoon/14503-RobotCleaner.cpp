@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14503__	1		//21.02.07	//로봇 청소기
 
 #if __BACKJOON_14503__
 //1

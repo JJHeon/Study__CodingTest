@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14499__	1		//21.02.02	//주사위 굴리기
 
 #if __BACKJOON_14499__
 //1

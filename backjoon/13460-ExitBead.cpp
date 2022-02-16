@@ -8,7 +8,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_13460__	1		//21.02.02	//구슬 탈출2
 
 #if __BACKJOON_13460__
 

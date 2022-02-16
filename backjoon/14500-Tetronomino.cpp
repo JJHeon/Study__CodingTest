@@ -8,7 +8,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14500__10		//21.02.04	//테트로미노
 
 #if __BACKJOON_14500__
 

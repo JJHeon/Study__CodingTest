@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_3190__	1		//21.01.06	//뱀
 
 #if __BACKJOON_3190__
 #include <iostream>

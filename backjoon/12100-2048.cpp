@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_12100__	1		//21.01.07	//2048
 
 #if __BACKJOON_12100__
 //#pragma warning(disable:4996)

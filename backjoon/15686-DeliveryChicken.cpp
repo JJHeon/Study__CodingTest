@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_15686__	1		//21.02.11	//치킨 배달
 
 #if __BACKJOON_15686__
 

@@ -1,18 +1,18 @@
 /*
-@Title		: 백준
-@Name		: 연산자 끼워넣기
+@Title		: ¹??Ø
+@Name		: ¿????? ³?¿?³?±?
 @First0		: 20.11.10
 @Revision1	: 21.02.07
 @Revision2	: 21.02.07
 @ETC		: S1
-항상 Top이 최신 코드
+?×?? Top?? ??½? ????
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14888__	1		//21.02.07	//연산자 끼워넣기
 
 #if __BACKJOON_14888__
 
-//2
+// 2
 #if 1
 #include <iostream>
 #include <cstdint>
@@ -27,42 +27,45 @@ int MAX_RESULT = INT32_MIN;
 int MIN_RESULT = INT32_MAX;
 
 void DFS(int res, int cnt) {
-	if (cnt == N) {
-		MAX_RESULT = std::max(MAX_RESULT, res);
-		MIN_RESULT = std::min(MIN_RESULT, res);
-		return;
-	}
+    if (cnt == N) {
+        MAX_RESULT = std::max(MAX_RESULT, res);
+        MIN_RESULT = std::min(MIN_RESULT, res);
+        return;
+    }
 
-	for (int i = 0; i < 4; i++) {
-		if (OPERATOR[i] > 0) {
-			OPERATOR[i]--;
+    for (int i = 0; i < 4; i++) {
+        if (OPERATOR[i] > 0) {
+            OPERATOR[i]--;
 
-			if (i == 0) DFS(res + ARRAY[cnt], cnt + 1);
-			else if (i == 1) DFS(res - ARRAY[cnt], cnt + 1);
-			else if (i == 2) DFS(res * ARRAY[cnt], cnt + 1);
-			else if (i == 3) DFS(res / ARRAY[cnt], cnt + 1);
+            if (i == 0)
+                DFS(res + ARRAY[cnt], cnt + 1);
+            else if (i == 1)
+                DFS(res - ARRAY[cnt], cnt + 1);
+            else if (i == 2)
+                DFS(res * ARRAY[cnt], cnt + 1);
+            else if (i == 3)
+                DFS(res / ARRAY[cnt], cnt + 1);
 
-			OPERATOR[i]++;
-		}
-	}
+            OPERATOR[i]++;
+        }
+    }
 }
 
-
 int main() {
-	cin >> N;
-	for (int i = 0; i < N; i++) cin >> ARRAY[i];
-	for (int i = 0; i < 4; i++) cin >> OPERATOR[i];
+    cin >> N;
+    for (int i = 0; i < N; i++) cin >> ARRAY[i];
+    for (int i = 0; i < 4; i++) cin >> OPERATOR[i];
 
-	DFS(ARRAY[0], 1);
+    DFS(ARRAY[0], 1);
 
-	cout << MAX_RESULT << endl;
-	cout << MIN_RESULT << endl;
+    cout << MAX_RESULT << endl;
+    cout << MIN_RESULT << endl;
 
-	return 0;
+    return 0;
 }
 #endif
 
-//1
+// 1
 #if 0
 #include <iostream>
 #include <algorithm>
@@ -146,9 +149,9 @@ int main() {
 }
 #endif
 
-//0
+// 0
 #if 0
-#pragma warning(disable:4996)
+#pragma warning(disable : 4996)
 #include <iostream>
 #include <climits>
 #include <cstdint>
@@ -177,7 +180,7 @@ int Factorial(int x) {
 	}
 }
 
-//1 ~ N까지
+//1 ~ N±???
 bool Pulse_xUP_Number_Of_Cases(int* cases_array, int size, int pulse_x) {
 	int user_max = size;
 
@@ -186,18 +189,18 @@ bool Pulse_xUP_Number_Of_Cases(int* cases_array, int size, int pulse_x) {
 
 
 		while (pulse_x != 0) {
-			if (target_position < 1) return false; //만약 1보다 밑이면 끝내
+			if (target_position < 1) return false; //¸¸¾? 1º¸´? ¹Ø??¸? ³¡³?
 
 			bool is_existent = false;
 
-			//target_position 뒤에있는거중 나보다 큰것이 존재하냐?
+			//target_position ??¿¡??´?°??ß ³ªº¸´? ??°??? ?¸????³??
 			for (int i = target_position + 1; i <= size; i++) {
 				if (cases_array[target_position] < cases_array[i]) {
 					is_existent = true;
 					break;
 				}
 			}
-			//존재하는 경우.
+			//?¸????´? °æ¿?.
 			if (is_existent) {
 
 				bool is_continue = true;
@@ -207,24 +210,24 @@ bool Pulse_xUP_Number_Of_Cases(int* cases_array, int size, int pulse_x) {
 					futher_value++;
 					is_continue = false;
 
-					//기준점 앞에있는 애들과 일치하냐?
+					//±??Ø?¡ ¾?¿¡??´? ¾???°? ???¡??³??
 					for (int i = 1; i < target_position; i++) {
 						if (futher_value == cases_array[i]) {
 							is_continue = true;
 						}
 					}
 
-					//일치하지 않음 ok
+					//???¡???? ¾??½ ok
 					if (!is_continue) {
 						cases_array[target_position] = futher_value;
 						pulse_x--;
 
-						//target은 채웟고 , target포함 앞단 친구들을 제외하고 그 뒤애들은 1에서 가까운 순으로 배치하자
+						//target?º ?¤?m°? , targetÆ÷?? ¾?´? ??±¸???? ??¿???°? ±× ??¾????º 1¿¡¼­ °¡±?¿? ¼ø?¸·? ¹??¡????
 						for (int i = target_position + 1; i <= size; i++) {
 							for (int j = 1; j <= size; j++) {
 								bool is_pass = true;
 
-								//앞단이랑 비슷하냐?
+								//¾?´???¶? º?½???³??
 								for (int k = 1; k <= i - 1; k++) {
 									if (cases_array[k] == j) {
 										is_pass = false;
@@ -232,7 +235,7 @@ bool Pulse_xUP_Number_Of_Cases(int* cases_array, int size, int pulse_x) {
 									}
 								}
 
-								//앞단과 다르다. 그럼 ok pass
+								//¾?´?°? ´?¸?´?. ±×·³ ok pass
 								if (is_pass) {
 									cases_array[i] = j;
 									break;
@@ -244,7 +247,7 @@ bool Pulse_xUP_Number_Of_Cases(int* cases_array, int size, int pulse_x) {
 
 				}
 			}
-			//존재하지 않는다 
+			//?¸?????? ¾?´?´? 
 			else {
 				target_position--;
 			}
@@ -266,7 +269,7 @@ int main() {
 		cin >> user_operator[i];
 
 
-	int count = 1; //1부터 하자
+	int count = 1; //1º??? ????
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < user_operator[i]; j++) {
 			user_operator_arr[count++] = i;
@@ -274,7 +277,7 @@ int main() {
 	}
 	delete[] user_operator;
 
-	//1,2,3,4,5,6,7,8 ... 순 기본 배치
+	//1,2,3,4,5,6,7,8 ... ¼ø ±?º? ¹??¡
 	for (int i = 1; i <= N; i++) {
 		user_operator_num_counter[i] = i;
 	}

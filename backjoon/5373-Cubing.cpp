@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_5373__	1		//21.02.23	//큐빙
 
 #if __BACKJOON_5373__
 

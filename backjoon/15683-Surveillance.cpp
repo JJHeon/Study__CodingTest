@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_15683__	1		//21.02.11	//??
 
 #if __BACKJOON_15683__
 

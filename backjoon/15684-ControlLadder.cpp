@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_15684__	1		//21.02.11	//사다리 조작
 
 #if __BACKJOON_15684__
 

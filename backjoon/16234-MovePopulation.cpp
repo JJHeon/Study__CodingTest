@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_16234__	1		//21.02.27	//인구이동
 
 #if __BACKJOON_16234__
 

@@ -8,7 +8,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14502__	1		//21.02.07	//연구소
 
 #if __BACKJOON_14502__
 //2

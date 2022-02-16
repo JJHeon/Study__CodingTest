@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_15685__	1		//21.02.11	//드래곤 커브
 
 #if __BACKJOON_15685__
 

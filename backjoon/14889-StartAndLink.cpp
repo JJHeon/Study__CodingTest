@@ -7,7 +7,7 @@
 항상 Top이 최신 코드
 */
 
-#include "Manager.h"
+#define	__BACKJOON_14889__	1		//21.02.08	//스타트와 링크
 
 #if __BACKJOON_14889__
 
