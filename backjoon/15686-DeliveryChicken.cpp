@@ -12,7 +12,7 @@
 #if __BACKJOON_15686__
 
 //0
-#if 0
+#if 1
 #include <iostream>
 #include <cstdint>
 #include <vector>

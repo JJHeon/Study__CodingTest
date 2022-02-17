@@ -12,10 +12,10 @@
 #if __BACKJOON_15685__
 
 //0
-#if 0
+#if 1
 #include <iostream>
 #include <stack>
-#include <vector>;
+#include <vector>
 #include <cstring>
 using namespace std;
 using Command = struct _Command {

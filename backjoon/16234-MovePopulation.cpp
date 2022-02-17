@@ -12,7 +12,7 @@
 #if __BACKJOON_16234__
 
 //0
-#if 0
+#if 1
 #include <iostream>
 #include <cstring>
 #include <cmath>
