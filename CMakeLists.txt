@@ -11,12 +11,15 @@ project(
 
 add_definitions("-Wall -std=c++17")
 
-# Test CMake
+# Test CMake ---------------------------------------------------------------------------------
 add_executable(cmake_test cmake_test/main.cc)
 
+# Useful library ---------------------------------------------------------------------------------
+add_executable(library-input_stream library/input_stream/input_stream.cc)
 
-# BackJoon Problams
-add_executable(backjoon-3190 backjoon/3190-Snake.cpp)               #21.01.06	#뱀
+# BackJoon Problams ---------------------------------------------------------------------------------
+# Samsung SW CodingTest 기출 문제
+add_executable(backjoon-3190 backjoon/3190-Snake.cpp)               #21.01.06	#뱀 
 add_executable(backjoon-12100 backjoon/12100-2048.cpp)              #21.01.07	#2048
 add_executable(backjoon-13458 backjoon/13458-TestSupervisor.cpp)    #21.02.02	#시험 감독
 add_executable(backjoon-13460 backjoon/13460-ExitBead.cpp)          #21.02.02	#구슬 탈출2
