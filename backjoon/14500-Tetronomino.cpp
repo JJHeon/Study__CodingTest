@@ -8,15 +8,15 @@
 항상 Top이 최신 코드
 */
 
-#define	__BACKJOON_14500__10		//21.02.04	//테트로미노
+#define __BACKJOON_14500__ 1  // 21.02.04	//테트로미노
 
 #if __BACKJOON_14500__
 
-//2
+// 2
 #if 1
 #include <iostream>
 #include <cstring>
-#define MAX(a,b) (((a) > (b)) ? (a) : (b))
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 using namespace std;
 
@@ -25,70 +25,62 @@ int MAP[500][500];
 bool CHECK[500][500];
 
 int RESULT;
-int ROW_DIR[4] = { 0,0,-1,1 };
-int COL_DIR[4] = { 1,-1,0,0 };
+int ROW_DIR[4] = {0, 0, -1, 1};
+int COL_DIR[4] = {1, -1, 0, 0};
 
 void ShapeForOdd(int ROW, int COL) {
-	if (ROW + 1 < N && COL + 2 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW][COL + 1] + MAP[ROW][COL + 2] + MAP[ROW + 1][COL + 1]));
-	if (ROW + 2 < N && COL + 1 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW + 1][COL] + MAP[ROW + 2][COL] + MAP[ROW + 1][COL + 1]));
-	if (ROW - 1 >= 0 && COL + 2 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW][COL + 1] + MAP[ROW - 1][COL + 1] + MAP[ROW][COL + 2]));
-	if (ROW + 2 < N && COL - 1 >= 0) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW + 1][COL] + MAP[ROW + 1][COL - 1] + MAP[ROW + 2][COL]));
+    if (ROW + 1 < N && COL + 2 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW][COL + 1] + MAP[ROW][COL + 2] + MAP[ROW + 1][COL + 1]));
+    if (ROW + 2 < N && COL + 1 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW + 1][COL] + MAP[ROW + 2][COL] + MAP[ROW + 1][COL + 1]));
+    if (ROW - 1 >= 0 && COL + 2 < M) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW][COL + 1] + MAP[ROW - 1][COL + 1] + MAP[ROW][COL + 2]));
+    if (ROW + 2 < N && COL - 1 >= 0) RESULT = MAX(RESULT, (MAP[ROW][COL] + MAP[ROW + 1][COL] + MAP[ROW + 1][COL - 1] + MAP[ROW + 2][COL]));
 }
 
 void DFS(int ROW, int COL, int SUM, int cnt) {
-	CHECK[ROW][COL] = true;
+    CHECK[ROW][COL] = true;
 
-	if (cnt == 3) {
-		RESULT = MAX(SUM, RESULT);
+    if (cnt == 3) {
+        RESULT = MAX(SUM, RESULT);
 
-		return;
-	}
+        return;
+    }
 
-	for (int i = 0; i < 4; i++) {
-		int nROW = ROW + ROW_DIR[i];
-		int nCOL = COL + COL_DIR[i];
+    for (int i = 0; i < 4; i++) {
+        int nROW = ROW + ROW_DIR[i];
+        int nCOL = COL + COL_DIR[i];
 
-		if (nROW < 0 || nROW >= N || nCOL < 0 || nCOL >= M) continue;
-		if (CHECK[nROW][nCOL]) continue;
+        if (nROW < 0 || nROW >= N || nCOL < 0 || nCOL >= M) continue;
+        if (CHECK[nROW][nCOL]) continue;
 
-		DFS(nROW, nCOL, SUM + MAP[nROW][nCOL], cnt + 1);
+        DFS(nROW, nCOL, SUM + MAP[nROW][nCOL], cnt + 1);
 
-
-		CHECK[nROW][nCOL] = false;
-	}
+        CHECK[nROW][nCOL] = false;
+    }
 }
 
-
-
 int main() {
-	cin >> N >> M;
-	for (int i = 0; i < N; i++)
-		for (int j = 0; j < M; j++)
-			cin >> MAP[i][j];
+    cin >> N >> M;
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < M; j++)
+            cin >> MAP[i][j];
 
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			memset(CHECK, false, sizeof(CHECK));
-			DFS(i, j, MAP[i][j], 0);
-			ShapeForOdd(i, j);
-		}
-	}
-	cout << RESULT;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            memset(CHECK, false, sizeof(CHECK));
+            DFS(i, j, MAP[i][j], 0);
+            ShapeForOdd(i, j);
+        }
+    }
+    cout << RESULT;
 
-
-
-
-
-
-	return 0;
+    return 0;
 }
 #endif
 
-//1
+// 1
 #if 0
 #include <iostream>
 #include <cstdint>
-#define MAX(a,b) (((a)>(b)) ? (a) : (b))
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
 using namespace std;
 
 typedef struct _Block {
@@ -194,9 +186,9 @@ int main() {
 	return 0;
 }
 #endif
-//0
+// 0
 #if 0
-#pragma warning(disable:4996)
+#pragma warning(disable : 4996)
 #include <iostream>
 #include <climits>
 using namespace std;
