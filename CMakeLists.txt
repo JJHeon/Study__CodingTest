@@ -22,7 +22,7 @@ target_compile_options(_input_reader PUBLIC -Wall)
 
 
 # Test CMake ---------------------------------------------------------------------------------
-# 1
+# 1 cmake test
 add_executable(cmake_test-1 cmake_test/main.cc)
 
 # 2 _input_reader library
@@ -30,6 +30,10 @@ add_executable(cmake_test-2 cmake_test/main-2.cc)
 target_include_directories(cmake_test-2 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 target_link_libraries(cmake_test-2 PRIVATE _input_reader)
 
+# 3 Template Test
+add_executable(test_template backjoon/test_template.cc)
+target_include_directories(test_template PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
+target_link_libraries(test_template PUBLIC _input_reader)
 
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
@@ -53,3 +57,4 @@ add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp)   #21.02.11	#�
 add_executable(backjoon-5373 backjoon/5373-Cubing)                  #21.02.23	#큐빙      
 add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp)    #21.02.27	#인구이동
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp)       #21.03.18	#나무 재태크
+
