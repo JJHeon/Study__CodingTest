@@ -12,7 +12,7 @@
 
 namespace input_reader {
 
-InputPracticeProblem::InputPracticeProblem() : style_(R"(^\[\d+\]\s(\w\s*)+\b)") {}
+InputPracticeProblem::InputPracticeProblem() : style_(R"(\[\d+\]\s+(\w\s*)+\b)", std::regex::ECMAScript) {}
 
 void InputPracticeProblem::ReadFile(std::string_view path) {
     namespace fs = std::filesystem;
