@@ -9,13 +9,15 @@ project(
     DESCRIPTION "Build the selcted codes"
     LANGUAGES CXX)
 
-add_definitions("-Wall -std=c++17")
-
+add_definitions("-g -Wall -std=c++17")
 # Test CMake ---------------------------------------------------------------------------------
 add_executable(cmake_test cmake_test/main.cc)
 
 # Useful library ---------------------------------------------------------------------------------
-add_executable(library-input_stream library/input_stream/input_stream.cc)
+# input_reader 22.02.21 
+add_library(_input_reader STATIC ${CMAKE_SOURCE_DIR}/library/src/input_reader/input_reader.cc)
+target_include_directories(_input_reader PUBLIC ${CMAKE_SOURCE_DIR}/library/src)
+target_compile_options(_input_reader PUBLIC -Wall -Werror)
 
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
