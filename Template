@@ -4,18 +4,41 @@
 @Revision	:
 @ETC		:
 */
-
+/* ----------------------- For Auto Test ---------------------- */
 #include <iostream>
-
 #include <sstream>
 #include <string>
 #include "input_reader.h"
 
-/* ------------------------- Auto Test ------------------------- */
-/* --------------------- Don't touch codes --------------------- */
 #define AUTO_TEST_MODE 1
 #define DEBUG_INPUT_READER 0
 
+/* ====================== UserCode Header ===================== */
+
+/**
+ * @parm input : test_case input
+ */
+/* ========================= UserCode ========================= */
+
+int Solution(std::stringstream& input) {
+// Input
+#if AUTO_TEST_MODE
+// Using input param
+#else
+    // Don't use input parm
+    // Write input process using std::cin
+
+#endif
+
+    // Process
+
+    // Result
+    return 0;
+}
+
+/* ------------------------- Auto Test ------------------------- */
+/* --------------------- Don't touch codes --------------------- */
+#if AUTO_TEST_MODE
 constexpr char* test_case_file_path = "../test_case/test.txt";
 int Solution(std::stringstream& input);
 
@@ -49,24 +72,12 @@ int main() {
 
     return 0;
 }
-
-/**
- * @parm input : test_case input
- */
-/* ========================= UserCode ========================= */
-
-int Solution(std::stringstream& input) {
-// Input
-#if AUTO_TEST_MODE
-// Using input param
 #else
-    // Don't use input parm
-    // Write input process using std::cin
+// For Website Compiler
+int main() {
+    Solution();
 
-#endif
-
-    // Process
-
-    // Result
     return 0;
 }
+
+#endif
