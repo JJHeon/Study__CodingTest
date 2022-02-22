@@ -1,17 +1,25 @@
 /*
-@Title		:
-@Name		:
-@Revision	:
-@ETC		:
+@Title		 :
+@Name		 :
+@First Update:
+@ETC         : This code use input_reader library for auto testing that read text as numbers or alphabet
 */
-/* ----------------------- For Auto Test ---------------------- */
-#include <iostream>
+
+/* ====================== Auto Mode Settings ===================== */
+#define TRUE 1
+#define FALSE 0
+#define AUTO_TEST_MODE TRUE
+#define DEBUG_INPUT_READER FALSE
+const char* test_case_file_path = "../test_case/test.txt";
+
+/* -------------- For Auto Test(Don't touch CODES) --------------- */
+#if AUTO_TEST_MODE
 #include <sstream>
 #include <string>
 #include "input_reader.h"
+#endif
 
-#define AUTO_TEST_MODE 1
-#define DEBUG_INPUT_READER 0
+#include <iostream>
 
 /* ====================== UserCode Header ===================== */
 
@@ -19,27 +27,31 @@
  * @parm input : test_case input
  */
 /* ========================= UserCode ========================= */
-
-int Solution(std::stringstream& input) {
-// Input
 #if AUTO_TEST_MODE
-// Using input param
-#else
-    // Don't use input parm
-    // Write input process using std::cin
+int Solution(std::stringstream& input) {
+    // Input ,Using input param if you are AUTO_TEST_MODE
 
+#else
+int Solution() {
+    // Input, // Write input process using std::cin
 #endif
 
     // Process
-
+    std::cout << "Write Process!" << std::endl;
     // Result
     return 0;
 }
 
-/* ------------------------- Auto Test ------------------------- */
-/* --------------------- Don't touch codes --------------------- */
-#if AUTO_TEST_MODE
-constexpr char* test_case_file_path = "../test_case/test.txt";
+/* -------------- For Auto Test(Don't touch CODES) --------------- */
+#if AUTO_TEST_MODE == FALSE
+// For Website Compiler
+int main() {
+    Solution();
+
+    return 0;
+}
+
+#else
 int Solution(std::stringstream& input);
 
 int main() {
@@ -69,13 +81,6 @@ int main() {
         std::cout << std::endl;
     }
 #endif
-
-    return 0;
-}
-#else
-// For Website Compiler
-int main() {
-    Solution();
 
     return 0;
 }
