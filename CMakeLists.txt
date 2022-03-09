@@ -60,11 +60,14 @@ add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp)    #21.02.27	#�
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp)       #21.03.18	#나무 재태크
 
 # Apply library Version 1.0
-add_executable(backjoon-9251 backjoon/9251-LCS.cc)                                                        #21.03.01 #LCS
+add_executable(backjoon-9251 backjoon/9251-LCS.cc)                                                        #22.03.01 #LCS
 target_link_libraries(backjoon-9251 PUBLIC _input_reader)
 target_include_directories(backjoon-9251 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
-add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc)                                              #21.03.01 #연속합
+add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc)                                              #22.03.01 #연속합
 target_link_libraries(backjoon-1912 PUBLIC _input_reader)
 target_include_directories(backjoon-1912 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
+add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc)                                         #22.03.05 #평범한 배낭
+target_link_libraries(backjoon-12865 PUBLIC _input_reader)
+target_include_directories(backjoon-12865 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
