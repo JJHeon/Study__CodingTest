@@ -71,3 +71,7 @@ target_include_directories(backjoon-1912 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/
 add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc)                                         #22.03.05 #평범한 배낭
 target_link_libraries(backjoon-12865 PUBLIC _input_reader)
 target_include_directories(backjoon-12865 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
+
+add_executable(backjoon-1003 backjoon/1003-fibonazzi_function.cc)                                         #22.03.12 #fibonazzi 함수
+target_link_libraries(backjoon-1003 PUBLIC _input_reader)
+target_include_directories(backjoon-1003 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
