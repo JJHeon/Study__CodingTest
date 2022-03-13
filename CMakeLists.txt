@@ -84,5 +84,6 @@ target_include_directories(backjoon-1003 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/
 add_executable(backjoon-15649 backjoon/15649-NandM.cc)              #22.03.13
 add_executable(backjoon-15650 backjoon/15650-NandM_2.cc)            #22.03.13
 add_executable(backjoon-15651 backjoon/15651-NandM_3.cc)            #22.03.13
+add_executable(backjoon-15652 backjoon/15652-NandM_4.cc)            #22.03.13
 
 
