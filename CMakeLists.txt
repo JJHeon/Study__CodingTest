@@ -36,6 +36,9 @@ add_executable(test_template backjoon/test_template.cc)
 target_include_directories(test_template PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 target_link_libraries(test_template PUBLIC _input_reader)
 
+# 4 Test the Code piece
+add_executable(test_somecode backjoon/test_somecode.cc)
+
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
 add_executable(backjoon-3190 backjoon/3190-Snake.cpp)               #21.01.06	#뱀 
@@ -75,3 +78,4 @@ target_include_directories(backjoon-12865 PUBLIC ${CMAKE_SOURCE_DIR}/library/src
 add_executable(backjoon-1003 backjoon/1003-fibonazzi_function.cc)                                         #22.03.12 #fibonazzi 함수
 target_link_libraries(backjoon-1003 PUBLIC _input_reader)
 target_include_directories(backjoon-1003 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
+
