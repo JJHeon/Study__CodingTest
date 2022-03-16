@@ -91,3 +91,5 @@ add_executable(backjoon-11654 backjoon/11654-AsciiCode.cc)          #22.03.15
 add_executable(backjoon-11720 backjoon/11720-SumOfNumbers.cc)       #22.03.16
 add_executable(backjoon-10809 backjoon/10809-SearchAlphabet.cc)     #22.03.16
 add_executable(backjoon-2675 backjoon/2675-RepeatString.cc)         #22.03.16
+add_executable(backjoon-1157 backjoon/1157-WordStudy.cc)            #22.03.16
+
