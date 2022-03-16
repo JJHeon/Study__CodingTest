@@ -87,7 +87,9 @@ add_executable(backjoon-15651 backjoon/15651-NandM_3.cc)            #22.03.13
 add_executable(backjoon-15652 backjoon/15652-NandM_4.cc)            #22.03.13
 add_executable(backjoon-9663 backjoon/9663-N_Queen.cc)              #22.03.13
 add_executable(backjoon-2580 backjoon/2580-Sudoku.cc)               #22.03.15
-add_executable(backjoon-11654 backjoon/11654-AsciiCode.cc)               #22.03.15
+add_executable(backjoon-11654 backjoon/11654-AsciiCode.cc)          #22.03.15
+add_executable(backjoon-11720 backjoon/11720-SumOfNumbers.cc)       #22.03.16
+
 
 
 
