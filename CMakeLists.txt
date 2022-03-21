@@ -96,8 +96,7 @@ add_executable(backjoon-1152 backjoon/1152-NumberOfWord.cc)         #22.03.16
 add_executable(backjoon-2908 backjoon/2908-Constant.cc)             #22.03.17
 add_executable(backjoon-5622 backjoon/5622-Dial.cc)                 #22.03.17
 add_executable(backjoon-2941 backjoon/2941-CroatiaAlphabet.cc)      #22.03.17
-
-
+add_executable(backjoon-1316 backjoon/1316-GroupWordChecker.cc)     #22.03.21
 
 
 
