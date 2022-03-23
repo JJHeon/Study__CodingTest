@@ -99,6 +99,8 @@ add_executable(backjoon-2941 backjoon/2941-CroatiaAlphabet.cc)      #22.03.17
 add_executable(backjoon-1316 backjoon/1316-GroupWordChecker.cc)     #22.03.21
 add_executable(backjoon-11047 backjoon/11047-CoinZero.cc)           #22.03.22
 add_executable(backjoon-1931 backjoon/1931-AssignMeetingRoom.cc)    #22.03.22
+add_executable(backjoon-11399 backjoon/11399-ATM.cc)                #22.03.23
+
 
 
 
