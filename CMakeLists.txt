@@ -101,6 +101,7 @@ add_executable(backjoon-11047 backjoon/11047-CoinZero.cc)           #22.03.22
 add_executable(backjoon-1931 backjoon/1931-AssignMeetingRoom.cc)    #22.03.22
 add_executable(backjoon-11399 backjoon/11399-ATM.cc)                #22.03.23
 add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
+add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
 
