@@ -105,6 +105,6 @@ add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
 
-
+add_executable(real real_test/00003-Line_3.cc)                      #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
