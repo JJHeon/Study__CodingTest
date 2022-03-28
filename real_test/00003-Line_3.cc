@@ -38,17 +38,10 @@ vector<int> solution(int num_teams, vector<string> remote_tasks, vector<string> 
 
     for (auto works : home_workers) sort(works.begin(), works.end());
 
-    for (auto works : home_workers) {
-        // for (auto i : works) cout << i << endl;
-        // cout << works.size() << endl;
-    }
-
     for (int team_i = 1; team_i != 11; team_i++) {
-        if (home_workers[team_i].size() > 0) cout << team_i << " ";
-        if (office_workers[team_i].size() < 1 || home_workers[team_i].size() >= 1) {
-            cout << home_workers[team_i].at(0) << " ";
+        if (office_workers[team_i].size() < 1 && home_workers[team_i].size() >= 1) {
+            home_workers[team_i].erase(home_workers[team_i].begin());
         }
-        cout << endl;
     }
 
     for (auto home_team : home_workers) {
