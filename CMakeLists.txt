@@ -105,8 +105,9 @@ add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
 
-add_executable(real programmers/00004-BestAlbum.cc)                      #test
+add_executable(real programmers/00005-JoggingSuit.cc)                      #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
 # 00004-BestAlbum.cc 베스트앨범                                     #22.03.29
+# 00005-JoggingSuit.cc 체육복                                       #22.03.
