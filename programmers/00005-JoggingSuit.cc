@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
         if (students[i] == 0) {
             int forward = i - 1;
             int backward = i + 1;
-            if (forward > 0 && students[forward] == 2) {
+            if (forward >= 0 && students[forward] == 2) {
                 students[forward]--;
                 students[i]++;
                 answer++;
