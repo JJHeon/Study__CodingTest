@@ -111,3 +111,4 @@ add_executable(real programmers/00006-Joystick.cc)                      #test
 # 00003-Camouflage.cc 위장                                          #22.03.29
 # 00004-BestAlbum.cc 베스트앨범                                     #22.03.29
 # 00005-JoggingSuit.cc 체육복                                       #22.03.30
+# 00006-Joystick.cc 조이스틱                                        #22.04.16
