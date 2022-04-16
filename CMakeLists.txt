@@ -104,11 +104,11 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-
-add_executable(real programmers/00006-Joystick.cc)                      #test
+add_executable(real programmers/00007-MakeBigNumber.cc)             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
 # 00004-BestAlbum.cc 베스트앨범                                     #22.03.29
 # 00005-JoggingSuit.cc 체육복                                       #22.03.30
 # 00006-Joystick.cc 조이스틱                                        #22.04.16
+# 00007-MakeBigNumber.cc 큰 수 만들기                               #22.04.16
