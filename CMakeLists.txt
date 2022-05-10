@@ -104,7 +104,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00016-TargetNumber.cc)             #test
+add_executable(real programmers/00017-MakePairAndErase.cc)             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -121,6 +121,7 @@ add_executable(real programmers/00016-TargetNumber.cc)             #test
 
 # 00015-DevelopFunction.cc 기능개발                                 #22.05.09
 # 00016-TargetNumber.cc 타겟넘버                                    #22.05.09
+# 00017-MakePairAndErase.cc 짝지어 제거하기                         #22.05.10
 
 
 # 못푼 문제들
