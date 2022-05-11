@@ -37,7 +37,8 @@ target_include_directories(test_template PUBLIC ${CMAKE_SOURCE_DIR}/library/src/
 target_link_libraries(test_template PUBLIC _input_reader)
 
 # 4 Test the Code piece
-add_executable(test_somecode backjoon/test_somecode.cc)
+add_executable(test_somecode tmp_test/somecode.cc)
+add_executable(test_tmpmain tmp_test/tmpmain.cc)
 
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
