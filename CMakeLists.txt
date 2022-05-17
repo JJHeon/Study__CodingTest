@@ -105,7 +105,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00023-MaximizationEquation.cc)             #test
+add_executable(real programmers/00024-HighstRankAndLowerRankInLotto.cc)             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -129,6 +129,7 @@ add_executable(real programmers/00023-MaximizationEquation.cc)             #test
 # 00021-CheckKeepingDistance.cc 거리두기 확인하기                   #22.05.16
 # 00022-ReceiveReportResult.cc 신고결과 받기                        #22.05.17
 # 00023-MaximizationEquation.cc 수식 최대화                         #22.05.17
+# 00024-HighstRankAndLowerRankInLotto.cc 로또의 최고순위와 최저순위 #22.05.17
 
 # 못푼 문제들
 # 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~ 
