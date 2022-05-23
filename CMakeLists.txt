@@ -105,7 +105,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00028-ShortestPathInGameMap.cc)             #test
+add_executable(real programmers/00029-NewsClustering.cc)             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -134,7 +134,7 @@ add_executable(real programmers/00028-ShortestPathInGameMap.cc)             #tes
 # 00026-Printer.cc 프린터                                           #22.05.18
 
 # 00028-ShortestPathInGameMap.cc 게임 맵 최단 거리                  #22.05.23
-
+# 00029-NewsClustering.cc 뉴스 클러스터링                           #22.05.23
 
 
 # 못푼 문제들
