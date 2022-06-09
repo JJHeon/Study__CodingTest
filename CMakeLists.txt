@@ -105,7 +105,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00027-SearchRanking.cc )             #test
+add_executable(real programmers/00045-EnglishWordChain.cc )             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -150,6 +150,7 @@ add_executable(real programmers/00027-SearchRanking.cc )             #test
 # 00042-2xnTiling.cc 2xn 타일링                                     #22.06.07
 # 00043-HIndex.cc H-Index                                           #22.06.08
 # 00044-Delivery.cc 배달                                            #22.06.08
+# 00045-EnglishWordChain.cc 영어 끝말잇기                           #22.06.09
 
 
 
