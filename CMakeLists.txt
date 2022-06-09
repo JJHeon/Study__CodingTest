@@ -105,7 +105,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00044-Delivery.cc)             #test
+add_executable(real programmers/00019-MenuRenewer.cc)             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -124,7 +124,7 @@ add_executable(real programmers/00044-Delivery.cc)             #test
 # 00016-TargetNumber.cc 타겟넘버                                    #22.05.09
 # 00017-MakePairAndErase.cc 짝지어 제거하기                         #22.05.10
 # 00018-RotateMatrixBoarder.cc 행렬 테두리 회전하기                 #22.05.11
-
+# 00019-MenuRenewer.cc 메뉴 리뉴얼                                  #22.06.09
 # 00020-ConvertParenthesis.cc 괄호 변환                             #22.05.16
 # 00021-CheckKeepingDistance.cc 거리두기 확인하기                   #22.05.16
 # 00022-ReceiveReportResult.cc 신고결과 받기                        #22.05.17
@@ -152,7 +152,7 @@ add_executable(real programmers/00044-Delivery.cc)             #test
 # 00044-Delivery.cc 배달                                            #22.06.08
 
 
+
 # 못푼 문제들
 # 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~ 
-# 00019-MenuRenewer.cc 메뉴 리뉴얼                                  #22.05.12 ~
 # 00027-SearchRanking.cc 순위 검색                                  #22.05.19 ~
