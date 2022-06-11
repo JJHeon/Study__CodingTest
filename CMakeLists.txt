@@ -105,7 +105,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
 
 
-add_executable(real programmers/00045-EnglishWordChain.cc )             #test
+add_executable(real programmers/00038-SecondaryKey.cc )             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -143,7 +143,7 @@ add_executable(real programmers/00045-EnglishWordChain.cc )             #test
 # 00035-Tuple.cc 튜플                                               #22.05.25
 # 00036-ExhaustedDegree.cc 피로도                                   #22.05.25
 # 00037-CalcultateParkingFee.cc 주차 요금 계산                      #22.05.25
-
+# 00038-SecondaryKey.cc 후보키                                      #22.06.10
 # 00039-TtangTtameoKgi.cc 땅따먹기                                  #22.05.30
 # 00040-NextBigNumber.cc 다음 큰 숫자                               #22.05.30
 # 00041-BiggestNumber.cc 가장 큰 수                                 #22.06.07
