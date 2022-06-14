@@ -1,7 +1,6 @@
 # Cmake Minimum required version 3.16.3
 cmake_minimum_required(VERSION 3.0)
 
-
 # Project Info
 project(
     CodingTest
@@ -16,11 +15,10 @@ set(OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/bin)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=1274976")
 
 # Useful library ---------------------------------------------------------------------------------
-# input_reader 22.02.21 
+# input_reader 22.02.21
 add_library(_input_reader STATIC ${CMAKE_SOURCE_DIR}/library/src/input_reader/input_reader.cc)
 target_include_directories(_input_reader PUBLIC ${CMAKE_SOURCE_DIR}/library/src)
 target_compile_options(_input_reader PUBLIC -Wall)
-
 
 # Test CMake ---------------------------------------------------------------------------------
 # 1 cmake test
@@ -42,70 +40,70 @@ add_executable(test_tmpmain tmp_test/tmpmain.cc)
 
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
-add_executable(backjoon-3190 backjoon/3190-Snake.cpp)               #21.01.06	#뱀 
-add_executable(backjoon-12100 backjoon/12100-2048.cpp)              #21.01.07	#2048
-add_executable(backjoon-13458 backjoon/13458-TestSupervisor.cpp)    #21.02.02	#시험 감독
-add_executable(backjoon-13460 backjoon/13460-ExitBead.cpp)          #21.02.02	#구슬 탈출2
-add_executable(backjoon-14499 backjoon/14499-RollDice.cpp)          #21.02.02	#주사위 굴리기
-add_executable(backjoon-14500 backjoon/14500-Tetronomino.cpp)       #21.02.04	#테트로미노
-add_executable(backjoon-14501 backjoon/14501-Resigned.cpp)          #21.02.06	#퇴사
-add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp)    #21.02.07	#연구소
-add_executable(backjoon-14503 backjoon/14503-RobotCleaner.cpp)      #21.02.07	#로봇 청소기
-add_executable(backjoon-14888 backjoon/14888-AddOperator.cpp)       #21.02.07	#연산자 끼워넣기
-add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp)      #21.02.08	#스타트와 링크
-add_executable(backjoon-14890 backjoon/14890-Slope.cpp)             #21.02.09	#경사로
-add_executable(backjoon-14891 backjoon/14891-Gear.cpp)              #21.02.09	#톱니바퀴
-add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp)      #21.02.11	#감시
-add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp)     #21.02.11	#사다리 조작
-add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp)       #21.02.11	#드래곤 커브
-add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp)   #21.02.11	#치킨 배달
-add_executable(backjoon-5373 backjoon/5373-Cubing)                  #21.02.23	#큐빙      
-add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp)    #21.02.27	#인구이동
-add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp)       #21.03.18	#나무 재태크
+add_executable(backjoon-3190 backjoon/3190-Snake.cpp) # 21.01.06	#뱀
+add_executable(backjoon-12100 backjoon/12100-2048.cpp) # 21.01.07	#2048
+add_executable(backjoon-13458 backjoon/13458-TestSupervisor.cpp) # 21.02.02	#시험 감독
+add_executable(backjoon-13460 backjoon/13460-ExitBead.cpp) # 21.02.02	#구슬 탈출2
+add_executable(backjoon-14499 backjoon/14499-RollDice.cpp) # 21.02.02	#주사위 굴리기
+add_executable(backjoon-14500 backjoon/14500-Tetronomino.cpp) # 21.02.04	#테트로미노
+add_executable(backjoon-14501 backjoon/14501-Resigned.cpp) # 21.02.06	#퇴사
+add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp) # 21.02.07	#연구소
+add_executable(backjoon-14503 backjoon/14503-RobotCleaner.cpp) # 21.02.07	#로봇 청소기
+add_executable(backjoon-14888 backjoon/14888-AddOperator.cpp) # 21.02.07	#연산자 끼워넣기
+add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스타트와 링크
+add_executable(backjoon-14890 backjoon/14890-Slope.cpp) # 21.02.09	#경사로
+add_executable(backjoon-14891 backjoon/14891-Gear.cpp) # 21.02.09	#톱니바퀴
+add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감시
+add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작
+add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp) # 21.02.11	#드래곤 커브
+add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달
+add_executable(backjoon-5373 backjoon/5373-Cubing) # 21.02.23	#큐빙
+add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동
+add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
 
 # Apply library Version 1.0
-add_executable(backjoon-9251 backjoon/9251-LCS.cc)                                                        #22.03.01 #LCS
+add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
 target_link_libraries(backjoon-9251 PUBLIC _input_reader)
 target_include_directories(backjoon-9251 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
-add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc)                                              #22.03.01 #연속합
+add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc) # 22.03.01 #연속합
 target_link_libraries(backjoon-1912 PUBLIC _input_reader)
 target_include_directories(backjoon-1912 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
-add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc)                                         #22.03.05 #평범한 배낭
+add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc) # 22.03.05 #평범한 배낭
 target_link_libraries(backjoon-12865 PUBLIC _input_reader)
 target_include_directories(backjoon-12865 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
-add_executable(backjoon-1003 backjoon/1003-fibonazzi_function.cc)                                         #22.03.12 #fibonazzi 함수
+add_executable(backjoon-1003 backjoon/1003-fibonazzi_function.cc) # 22.03.12 #fibonazzi 함수
 target_link_libraries(backjoon-1003 PUBLIC _input_reader)
 target_include_directories(backjoon-1003 PUBLIC ${CMAKE_SOURCE_DIR}/library/src/input_reader)
 
 # I encount the bugs for the input_reader library Version 1.0, So decide not to use library. #22.03.01
 # free compile version
-add_executable(backjoon-15649 backjoon/15649-NandM.cc)              #22.03.13
-add_executable(backjoon-15650 backjoon/15650-NandM_2.cc)            #22.03.13
-add_executable(backjoon-15651 backjoon/15651-NandM_3.cc)            #22.03.13
-add_executable(backjoon-15652 backjoon/15652-NandM_4.cc)            #22.03.13
-add_executable(backjoon-9663 backjoon/9663-N_Queen.cc)              #22.03.13
-add_executable(backjoon-2580 backjoon/2580-Sudoku.cc)               #22.03.15
-add_executable(backjoon-11654 backjoon/11654-AsciiCode.cc)          #22.03.15
-add_executable(backjoon-11720 backjoon/11720-SumOfNumbers.cc)       #22.03.16
-add_executable(backjoon-10809 backjoon/10809-SearchAlphabet.cc)     #22.03.16
-add_executable(backjoon-2675 backjoon/2675-RepeatString.cc)         #22.03.16
-add_executable(backjoon-1157 backjoon/1157-WordStudy.cc)            #22.03.16
-add_executable(backjoon-1152 backjoon/1152-NumberOfWord.cc)         #22.03.16
-add_executable(backjoon-2908 backjoon/2908-Constant.cc)             #22.03.17
-add_executable(backjoon-5622 backjoon/5622-Dial.cc)                 #22.03.17
-add_executable(backjoon-2941 backjoon/2941-CroatiaAlphabet.cc)      #22.03.17
-add_executable(backjoon-1316 backjoon/1316-GroupWordChecker.cc)     #22.03.21
-add_executable(backjoon-11047 backjoon/11047-CoinZero.cc)           #22.03.22
-add_executable(backjoon-1931 backjoon/1931-AssignMeetingRoom.cc)    #22.03.22
-add_executable(backjoon-11399 backjoon/11399-ATM.cc)                #22.03.23
-add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc)      #22.03.23
-add_executable(backjoon-13305 backjoon/13305-GasStation.cc)         #22.03.24
+add_executable(backjoon-15649 backjoon/15649-NandM.cc) # 22.03.13
+add_executable(backjoon-15650 backjoon/15650-NandM_2.cc) # 22.03.13
+add_executable(backjoon-15651 backjoon/15651-NandM_3.cc) # 22.03.13
+add_executable(backjoon-15652 backjoon/15652-NandM_4.cc) # 22.03.13
+add_executable(backjoon-9663 backjoon/9663-N_Queen.cc) # 22.03.13
+add_executable(backjoon-2580 backjoon/2580-Sudoku.cc) # 22.03.15
+add_executable(backjoon-11654 backjoon/11654-AsciiCode.cc) # 22.03.15
+add_executable(backjoon-11720 backjoon/11720-SumOfNumbers.cc) # 22.03.16
+add_executable(backjoon-10809 backjoon/10809-SearchAlphabet.cc) # 22.03.16
+add_executable(backjoon-2675 backjoon/2675-RepeatString.cc) # 22.03.16
+add_executable(backjoon-1157 backjoon/1157-WordStudy.cc) # 22.03.16
+add_executable(backjoon-1152 backjoon/1152-NumberOfWord.cc) # 22.03.16
+add_executable(backjoon-2908 backjoon/2908-Constant.cc) # 22.03.17
+add_executable(backjoon-5622 backjoon/5622-Dial.cc) # 22.03.17
+add_executable(backjoon-2941 backjoon/2941-CroatiaAlphabet.cc) # 22.03.17
+add_executable(backjoon-1316 backjoon/1316-GroupWordChecker.cc) # 22.03.21
+add_executable(backjoon-11047 backjoon/11047-CoinZero.cc) # 22.03.22
+add_executable(backjoon-1931 backjoon/1931-AssignMeetingRoom.cc) # 22.03.22
+add_executable(backjoon-11399 backjoon/11399-ATM.cc) # 22.03.23
+add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
+add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 
+add_executable(real programmers/00046-DividePowerGrid.cc) # test
 
-add_executable(real programmers/00038-SecondaryKey.cc )             #test
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
 # 00003-Camouflage.cc 위장                                          #22.03.29
@@ -151,8 +149,7 @@ add_executable(real programmers/00038-SecondaryKey.cc )             #test
 # 00043-HIndex.cc H-Index                                           #22.06.08
 # 00044-Delivery.cc 배달                                            #22.06.08
 # 00045-EnglishWordChain.cc 영어 끝말잇기                           #22.06.09
-
-
+# 00046-DividePowerGrid.cc 전력망을 둘로 나누기                     #22.06.13
 
 # 못푼 문제들
-# 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~ 
+# 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~
