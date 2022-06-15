@@ -102,7 +102,7 @@ add_executable(backjoon-11399 backjoon/11399-ATM.cc) # 22.03.23
 add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 
-add_executable(real programmers/00048-Friends4Block.cc) # test
+add_executable(real programmers/00049-ArcheryCompetition.cc) # test
 
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
@@ -152,6 +152,7 @@ add_executable(real programmers/00048-Friends4Block.cc) # test
 # 00046-DividePowerGrid.cc 전력망을 둘로 나누기                     #22.06.13
 # 00047-TriangleSnail.cc 삼각 달팽이                                #22.06.13
 # 00048-Friends4Block.cc 프렌즈4블럭                                #22.06.14
+# 00049-ArcheryCompetition.cc 양궁대회                              #22.06.16
 
 # 못푼 문제들
 # 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~
