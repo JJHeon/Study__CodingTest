@@ -60,6 +60,7 @@ add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#�
 add_executable(backjoon-5373 backjoon/5373-Cubing) # 21.02.23	#큐빙
 add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
+add_executable(backjjon-11507 backjoon/11507-CardSet.cc) # 22.06.25 #카드셋트
 
 # Apply library Version 1.0
 add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
