@@ -103,7 +103,7 @@ add_executable(backjoon-11399 backjoon/11399-ATM.cc) # 22.03.23
 add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 
-add_executable(real programmers/00062-RotateParenthesis.cc) # test
+add_executable(real programmers/00060-FindBigestSquare.cc) # test
 
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
@@ -164,7 +164,7 @@ add_executable(real programmers/00062-RotateParenthesis.cc) # test
 # 00057-ThatSong.cc 방금그곡                                         #22.06.22
 # 00058-SortFileName.cc 파일명 정렬                                  #22.06.22
 # 00059-CorrectParenthesis.cc 올바른 괄호                            #22.06.22
-
+# 00060-FindBigestSquare.cc 가장 큰 정사각형 찾기                    #22.07.01
 # 00061-FindPrimeNumber.cc 소수 찾기                                 #22.06.16
 # 00062-RotateParenthesis.cc 괄호 회전하기                           #22.06.16
 
