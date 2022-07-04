@@ -103,7 +103,7 @@ add_executable(backjoon-11399 backjoon/11399-ATM.cc) # 22.03.23
 add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 
-add_executable(real programmers/00064-NnumeralGame.cc) # test
+add_executable(real programmers/00065-VisitedLength.cc) # test
 
 # Probrammers Problams ---------------------------------------------------------------------------------
 # 00001-UnfinishedPlayer.cc 완주하지 못한 선수                      #22.03.24
@@ -168,6 +168,7 @@ add_executable(real programmers/00064-NnumeralGame.cc) # test
 # 00061-FindPrimeNumber.cc 소수 찾기                                 #22.06.16
 # 00062-RotateParenthesis.cc 괄호 회전하기                           #22.06.16
 # 00064-NnumeralGame.cc n진수 게임                                   #22.07.01
+# 00065-VisitedLength.cc 방문 길이                                   #22.07.04
 
 # 못푼 문제들
 # 00014-124CountryNumber.cc 124 나라의 숫자                         #22.05.06 ~
