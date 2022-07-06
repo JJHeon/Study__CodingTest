@@ -102,6 +102,7 @@ add_executable(backjoon-1931 backjoon/1931-AssignMeetingRoom.cc) # 22.03.22
 add_executable(backjoon-11399 backjoon/11399-ATM.cc) # 22.03.23
 add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
+add_executable(backjoon-1260 backjoon/1260-DFSAndBFS.cc) # 22.07.06             #DFS와 BFS
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
