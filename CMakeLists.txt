@@ -104,6 +104,7 @@ add_executable(backjoon-1541 backjoon/1541-LostParentheses.cc) # 22.03.23
 add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 add_executable(backjoon-1260 backjoon/1260-DFSAndBFS.cc) # 22.07.06             #DFS와 BFS
 add_executable(backjoon-2178 backjoon/2178-SearchMaze.cc) # 22.07.06            #미로 탐색
+add_executable(backjoon-2606 backjoon/2606-Virus.cc) # 22.07.06                 #바이러스
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
