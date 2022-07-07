@@ -105,6 +105,7 @@ add_executable(backjoon-13305 backjoon/13305-GasStation.cc) # 22.03.24
 add_executable(backjoon-1260 backjoon/1260-DFSAndBFS.cc) # 22.07.06             #DFS와 BFS
 add_executable(backjoon-2178 backjoon/2178-SearchMaze.cc) # 22.07.06            #미로 탐색
 add_executable(backjoon-2606 backjoon/2606-Virus.cc) # 22.07.06                 #바이러스
+add_executable(backjoon-2667 backjoon/2667-NamingHomeNumber.cc) # 22.07.07      #단지번호붙이기
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
