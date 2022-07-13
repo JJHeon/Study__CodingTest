@@ -113,6 +113,7 @@ add_executable(backjoon-2667 backjoon/2667-NamingHomeNumber.cc) # 22.07.07      
 add_executable(backjoon-2644 backjoon/2644-CalculateDegreeOfKinship.cc) # 22.07.07      #촌수계산
 add_executable(backjoon-7569 backjoon/7569-Tomato.cc) # 22.07.13                        #토마토
 add_executable(backjoon-1697 backjoon/1697-HideAndSeek.cc) # 22.07.13                   #숨바꼭질
+add_executable(backjoon-5014 backjoon/5014-StartLink.cc) # 22.07.13                     #스타트링크
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
