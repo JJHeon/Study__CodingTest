@@ -38,6 +38,10 @@ target_link_libraries(test_template PUBLIC _input_reader)
 add_executable(test_somecode tmp_test/somecode.cc)
 add_executable(test_tmpmain tmp_test/tmpmain.cc)
 
+# 5 Test for New TestCodeProvider library
+add_executable(test_pro ttt/main.cc) # 22.03.01 #연속합
+target_include_directories(test_pro PUBLIC ${CMAKE_SOURCE_DIR}/ttt)
+
 # BackJoon Problams ---------------------------------------------------------------------------------
 # Samsung SW CodingTest 기출 문제
 add_executable(backjoon-3190 backjoon/3190-Snake.cpp) # 21.01.06	#뱀
@@ -107,6 +111,7 @@ add_executable(backjoon-2178 backjoon/2178-SearchMaze.cc) # 22.07.06            
 add_executable(backjoon-2606 backjoon/2606-Virus.cc) # 22.07.06                 #바이러스
 add_executable(backjoon-2667 backjoon/2667-NamingHomeNumber.cc) # 22.07.07      #단지번호붙이기
 add_executable(backjoon-2644 backjoon/2644-CalculateDegreeOfKinship.cc) # 22.07.07      #촌수계산
+add_executable(backjoon-7569 backjoon/7569-Tomato.cc) # 22.07.13                        #토마토
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
