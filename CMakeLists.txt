@@ -116,6 +116,7 @@ add_executable(backjoon-1697 backjoon/1697-HideAndSeek.cc) # 22.07.13           
 add_executable(backjoon-5014 backjoon/5014-StartLink.cc) # 22.07.13                     #스타트링크
 add_executable(backjoon-2468 backjoon/2468-SafeZone.cc) # 22.07.13                      #안전 영역
 add_executable(backjoon-2563 backjoon/2563-IceMountain.cc) # 22.07.14                   #빙산
+add_executable(backjoon-9205 backjoon/9205-WalkingWithBear.cc) # 22.07.18               #맥주 마시며 걷기
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
