@@ -119,6 +119,7 @@ add_executable(backjoon-2563 backjoon/2563-IceMountain.cc) # 22.07.14           
 add_executable(backjoon-9205 backjoon/9205-WalkingWithBear.cc) # 22.07.18               #맥주 마시며 걷기
 add_executable(backjoon-1747 backjoon/1747-PrimeNumberAndPalindrome.cc) # 22.07.18               #소수&팰린드롬
 add_executable(backjoon-2589 backjoon/2589-TreasureIsland.cc) # 22.07.18               #보물섬
+add_executable(backjoon-7562 backjoon/7562-MoveOfKnight.cc) # 22.07.18               #나이트의 이동
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
