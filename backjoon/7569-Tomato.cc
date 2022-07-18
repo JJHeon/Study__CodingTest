@@ -9,7 +9,6 @@ int M, N, H;
 
 vector<vector<vector<int>>> BOX;
 
-
 int main() {
     cin >> M >> N >> H;
 
@@ -23,8 +22,8 @@ int main() {
             for (int j = 0; j < M; ++j) {
                 cin >> BOX[k][i][j];
                 if (BOX[k][i][j] == 0) all++;
-                if (BOX[k][i][j] > 0) q.push(make_tuple(k, i, j, 0));
-                if (BOX[k][i][j] < 0) visited[k][i][j] = BOX[k][i][j];
+                else if (BOX[k][i][j] > 0) q.push(make_tuple(k, i, j, 1));
+                else if (BOX[k][i][j] < 0) visited[k][i][j] = -1;
             }
     if (all == 0 && q.size() > 0) {
         cout << "0\n";
@@ -38,8 +37,8 @@ int main() {
     while (!q.empty()) {
         auto [h, y, x, c] = q.front();
         q.pop();
-        if (visited[h][y][x]) continue;
-        visited[h][y][x] = c + 1;
+        if (visited[h][y][x] != 0) continue;
+        visited[h][y][x] = c;
 
         for (int i = 0; i < 6; ++i) {
             int next_h = h + offset_h[i];
@@ -47,7 +46,7 @@ int main() {
             int next_x = x + offset_x[i];
 
             if (next_h < 0 || next_h >= H || next_y < 0 || next_y >= N || next_x < 0 || next_x >= M) continue;
-            if (BOX[next_h][next_y][next_x]) continue;
+            if (visited[next_h][next_y][next_x] != 0) continue;
 
             q.push(make_tuple(next_h, next_y, next_x, c + 1));
         }
@@ -57,7 +56,7 @@ int main() {
     for (int k = H - 1; k >= 0; --k) {
         for (int i = 0; i < N; ++i) {
             for (int j = 0; j < M; ++j) {
-                //cout << visited[k][i][j] << " ";
+                // cout << visited[k][i][j] << " ";
                 if (!visited[k][i][j]) {
                     cout << "-1\n";
                     return 0;
@@ -65,9 +64,9 @@ int main() {
 
                 max_value = max(max_value, visited[k][i][j]);
             }
-            //cout << "\n";
+            // cout << "\n";
         }
-        //cout << "\n";
+        // cout << "\n";
     }
     cout << max_value - 1 << "\n";
 
