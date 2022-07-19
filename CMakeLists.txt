@@ -125,6 +125,8 @@ add_executable(backjoon-2583 backjoon/2583-DrawArea.cc) # 22.07.19              
 add_executable(backjoon-1655 backjoon/1655-SayMiddleNumber.cc) # 22.07.19               #가운데를 말해요
 add_executable(backjoon-11050 backjoon/11050-BinomialCoefficient1.cc) # 22.07.19               #이항 계수 1
 add_executable(backjoon-11051 backjoon/11051-BinomialCoefficient2.cc) # 22.07.19               #이항 계수 2
+add_executable(backjoon-11401 backjoon/11401-BinomialCoefficient3.cc) # 22.07.19               #이항 계수 3
+add_executable(backjoon-16954 backjoon/16954-EscapeMovingMaze.cc) # 22.07.19               #움직이는 미로 탈출
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
