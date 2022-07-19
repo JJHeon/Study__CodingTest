@@ -123,6 +123,7 @@ add_executable(backjoon-7562 backjoon/7562-MoveOfKnight.cc) # 22.07.18          
 add_executable(backjoon-7576 backjoon/7576-Tomato.cc) # 22.07.18               #토마토
 add_executable(backjoon-2583 backjoon/2583-DrawArea.cc) # 22.07.19               #영역 구하기
 add_executable(backjoon-1655 backjoon/1655-SayMiddleNumber.cc) # 22.07.19               #가운데를 말해요
+add_executable(backjoon-11050 backjoon/11050-BinomialCoefficient1.cc) # 22.07.19               #이항 계수 1
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
