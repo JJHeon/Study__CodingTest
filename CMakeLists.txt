@@ -121,6 +121,7 @@ add_executable(backjoon-1747 backjoon/1747-PrimeNumberAndPalindrome.cc) # 22.07.
 add_executable(backjoon-2589 backjoon/2589-TreasureIsland.cc) # 22.07.18               #보물섬
 add_executable(backjoon-7562 backjoon/7562-MoveOfKnight.cc) # 22.07.18               #나이트의 이동
 add_executable(backjoon-7576 backjoon/7576-Tomato.cc) # 22.07.18               #토마토
+add_executable(backjoon-2583 backjoon/2583-DrawArea.cc) # 22.07.19               #영역 구하기
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
