@@ -129,6 +129,7 @@ add_executable(backjoon-11401 backjoon/11401-BinomialCoefficient3.cc) # 22.07.19
 add_executable(backjoon-16954 backjoon/16954-EscapeMovingMaze.cc) # 22.07.19               #움직이는 미로 탈출
 add_executable(backjoon-1956 backjoon/1956-Excercise.cc) # 22.07.20               #운동
 add_executable(backjoon-6087 backjoon/6087-LaserCommunication.cc) # 22.07.23               #레이저 통신
+add_executable(backjoon-7682 backjoon/7682-TickTeckTo.cc) # 22.07.23               #틱택토
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
