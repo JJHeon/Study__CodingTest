@@ -132,6 +132,7 @@ add_executable(backjoon-6087 backjoon/6087-LaserCommunication.cc) # 22.07.23    
 add_executable(backjoon-7682 backjoon/7682-TickTeckTo.cc) # 22.07.23               #틱택토
 add_executable(backjoon-2151 backjoon/2151-SetMirror.cc) # 22.07.23                #거울 설치
 add_executable(backjoon-1976 backjoon/1976-GoTrip.cc) # 22.07.23                #여행 가자
+add_executable(backjoon-16236 backjoon/16236-BabyShark.cc) # 22.07.23                #아기 상어
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
