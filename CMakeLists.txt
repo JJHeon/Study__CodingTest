@@ -135,6 +135,7 @@ add_executable(backjoon-1976 backjoon/1976-GoTrip.cc) # 22.07.23                
 add_executable(backjoon-16236 backjoon/16236-BabyShark.cc) # 22.07.23                #아기 상어
 add_executable(backjoon-16929 backjoon/16929-TwoDots.cc) # 22.07.24                #Two dots
 add_executable(backjoon-3055 backjoon/3055-Escape.cc) # 22.07.24                #탈출
+add_executable(backjoon-17836 backjoon/17836-RescuePrincess.cc) # 22.07.27                #공주님을 구해라!
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
