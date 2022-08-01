@@ -138,6 +138,7 @@ add_executable(backjoon-3055 backjoon/3055-Escape.cc) # 22.07.24                
 add_executable(backjoon-17836 backjoon/17836-RescuePrincess.cc) # 22.07.27                #공주님을 구해라!
 add_executable(backjoon-2234 backjoon/2234-Fortress.cc) # 22.07.28                #성곽
 add_executable(backjoon-17244 backjoon/17244-AMatThaUooSan.cc) # 22.07.28                #아맞다우산
+add_executable(backjoon-5427 backjoon/5427-Fire.cc) # 22.08.01                #불
 
 add_executable(real programmers/00068-JumpFar.cc) # test
 
