@@ -99,7 +99,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=1274976"
 # 22.07.19  #11401  #이항 계수 3
 
 # Probrammers Problams ------------------------------------------------------------------------------------
-add_executable(real programmers/00068-JumpFar.cc)
+add_executable(real programmers/00069-ChusoekTraffic.cc)
 
 # 22.03.24  #00001-UnfinishedPlayer.cc 완주하지 못한 선수
 # 22.03.29  #00003-Camouflage.cc 위장
@@ -169,6 +169,7 @@ add_executable(real programmers/00068-JumpFar.cc)
 # #00014-124CountryNumber.cc 124 나라의 숫자
 # #00063-MakeStarInIntersection.cc
 # #00067-FineSquare.cc
+# 00069-ChusoekTraffic.cc
 
 # Problams -----------------------------------------------------------------------------------------
 add_executable(backjoon-3190 backjoon/3190-Snake.cpp) # 21.01.06  #뱀
@@ -251,3 +252,4 @@ add_executable(backjoon-2234 backjoon/2234-Fortress.cc) # 22.07.28              
 add_executable(backjoon-17244 backjoon/17244-AMatThaUooSan.cc) # 22.07.28                #아맞다우산
 add_executable(backjoon-5427 backjoon/5427-Fire.cc) # 22.08.01                #불
 add_executable(backjoon-2668 backjoon/2668-PickNumber.cc) # 22.08.02                #숫자고르기
+add_executable(backjoon-1920 backjoon/1920-FindNumber.cc) # 22.10.07                #수 찾기
