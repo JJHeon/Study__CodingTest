@@ -253,3 +253,5 @@ add_executable(backjoon-17244 backjoon/17244-AMatThaUooSan.cc) # 22.07.28       
 add_executable(backjoon-5427 backjoon/5427-Fire.cc) # 22.08.01                #불
 add_executable(backjoon-2668 backjoon/2668-PickNumber.cc) # 22.08.02                #숫자고르기
 add_executable(backjoon-1920 backjoon/1920-FindNumber.cc) # 22.10.07                #수 찾기
+add_executable(backjoon-17144 backjoon/17144-GoodbyeDust.cc) # 22.10.07                #미세먼지 안녕
+
