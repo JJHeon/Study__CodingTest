@@ -255,5 +255,4 @@ add_executable(backjoon-2668 backjoon/2668-PickNumber.cc) # 22.08.02            
 add_executable(backjoon-1920 backjoon/1920-FindNumber.cc) # 22.10.07                #수 찾기
 add_executable(backjoon-17144 backjoon/17144-GoodbyeDust.cc) # 22.10.07                #미세먼지 안녕
 add_executable(backjoon-17143 backjoon/17143-FishingKing.cc) # 22.10.07                #낚시왕
-
-
+add_executable(backjoon-17140 backjoon/17140-2DimensionArrayAndCalulate.cc) # 22.10.17                #이차원 배열과 연산
