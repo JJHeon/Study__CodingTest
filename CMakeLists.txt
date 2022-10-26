@@ -258,3 +258,4 @@ add_executable(backjoon-17143 backjoon/17143-FishingKing.cc) # 22.10.07         
 add_executable(backjoon-17140 backjoon/17140-2DimensionArrayAndCalulate.cc) # 22.10.17                #이차원 배열과 연산
 add_executable(backjoon-17142 backjoon/17142-Lab3.cc) # 22.10.20                #연구소 3
 add_executable(backjoon-17779 backjoon/17779-GeryMendering.cc) # 22.10.24                #게리맨더링 2
+add_executable(backjoon-17837 backjoon/17837-NewGame2.cc) # 22.10.26                #새로운 게임 2
