@@ -259,3 +259,4 @@ add_executable(backjoon-17140 backjoon/17140-2DimensionArrayAndCalulate.cc) # 22
 add_executable(backjoon-17142 backjoon/17142-Lab3.cc) # 22.10.20                #연구소 3
 add_executable(backjoon-17779 backjoon/17779-GeryMendering.cc) # 22.10.24                #게리맨더링 2
 add_executable(backjoon-17837 backjoon/17837-NewGame2.cc) # 22.10.26                #새로운 게임 2
+add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불
