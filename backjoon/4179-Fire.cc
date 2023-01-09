@@ -2,128 +2,97 @@
 #include <vector>
 #include <cstring>
 #include <queue>
+#include <cstdint>
+#include <algorithm>
 
 using namespace std;
 
-int OFFSET_Y[4] = {-1, 0, 1, 0};
-int OFFSET_X[4] = {0, 1, 0, -1};
-char MAP[1001][1001];
-bool MOVE[1001][1001];
-bool FMOVE[1001][1001];
-int R, C;
+#define INF INT32_MAX
+int r, c;
+int dy[4] = {-1, 0, 1, 0};
+int dx[4] = {0, 1, 0, -1};
+char map[1001][1001];
+int jh[1001][1001];
+int fire[1001][1001];
+int sy, sx;
 
 int Solution() {
-    queue<pair<int, int>> q;
-    queue<pair<int, int>> fq;
-
-    cin >> R >> C;
-    for (int i = 0; i < R; ++i)
-        for (int j = 0; j < C; ++j) {
-            char in;
-            cin >> in;
-            if (in == 'J') {
-                q.push(make_pair(i, j));
-                in = '.';
-            }
-
-            else if (in == 'F')
-                fq.push(make_pair(i, j));
-            MAP[i][j] = in;
-        }
-    {
-        queue<pair<int, int>> fnq;
-        while (!fq.empty()) {
-            auto [y, x] = fq.front();
-            fq.pop();
-            if (FMOVE[y][x]) continue;
-
-            FMOVE[y][x] = true;
-
-            for (int way = 0; way < 4; ++way) {
-                int next_y = y + OFFSET_Y[way];
-                int next_x = x + OFFSET_X[way];
-
-                if (next_y < 0 || next_y >= R || next_x < 0 || next_x >= C) continue;
-                if (MAP[next_y][next_x] == '#') continue;
-                fnq.push(make_pair(next_y, next_x));
+    queue<pair<int, int>> fire_q;
+    fill(&fire[0][0], &fire[0][0] + 1001 * 1001, INF);
+    cin >> r >> c;
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            cin >> map[i][j];
+            if (map[i][j] == 'J') {
+                sy = i;
+                sx = j;
+            } else if (map[i][j] == 'F') {
+                fire[i][j] = 1;
+                fire_q.push({i, j});
             }
         }
-        fq = fnq;
     }
 
-    int timer = 0;
-    while (true) {
-        timer++;
+    
+    while (!fire_q.empty()) {
+        auto [y, x] = fire_q.front();
+        fire_q.pop();
 
-        queue<pair<int, int>> fnq;
-        while (!fq.empty()) {
-            auto [y, x] = fq.front();
-            fq.pop();
-            if (FMOVE[y][x]) continue;
-
-            FMOVE[y][x] = true;
-
-            for (int way = 0; way < 4; ++way) {
-                int next_y = y + OFFSET_Y[way];
-                int next_x = x + OFFSET_X[way];
-
-                if (next_y < 0 || next_y >= R || next_x < 0 || next_x >= C) continue;
-                if (MAP[next_y][next_x] == '#') continue;
-                fnq.push(make_pair(next_y, next_x));
-            }
+        for (int way = 0; way < 4; ++way) {
+            int ny = y + dy[way];
+            int nx = x + dx[way];
+            if (ny < 0 || r <= ny || nx < 0 || c <= nx) continue;
+            if (fire[ny][nx] != INF || map[ny][nx] == '#') continue;
+            fire[ny][nx] = fire[y][x] + 1;
+            fire_q.push({ny, nx});
         }
-        fq = fnq;
-
-        queue<pair<int, int>> nq;
-        while (!q.empty()) {
-            auto [y, x] = q.front();
-            q.pop();
-            if (MOVE[y][x]) continue;
-
-            MOVE[y][x] = true;
-
-            for (int way = 0; way < 4; ++way) {
-                int next_y = y + OFFSET_Y[way];
-                int next_x = x + OFFSET_X[way];
-
-                if (next_y < 0 || next_y >= R || next_x < 0 || next_x >= C) return timer;
-                if (FMOVE[next_y][next_x] || MAP[next_y][next_x] != '.') continue;
-
-                nq.push(make_pair(next_y, next_x));
-            }
-        }
-        if (nq.empty()) return -1;
-        q = nq;
-
-        // //debug
-        // cout << timer << endl;
-        // cout << "Fire" << endl;
-        // for (int i = 0; i < R; ++i) {
-        //     for (int j = 0; j <  C; ++j){
-        //         if (FMOVE[i][j]) cout << "1";
-        //         else
-        //             cout << "0";
-        //     }
-        //     cout << "\n";
-        // }
-        // cout << "PEOPLE" << endl;
-        // for (int i = 0; i < R; ++i) {
-        //     for (int j = 0; j <  C; ++j){
-        //         if (MOVE[i][j]) cout << "1";
-        //         else
-        //             cout << "0";
-        //     }
-        //     cout << "\n";
-        // }
-        // cout << "\n\n\n";
     }
+
+    queue<pair<int, int>> jh_q;
+    jh_q.push({sy, sx});
+    jh[sy][sx] = 1;
+    while (!jh_q.empty()) {
+        auto [y, x] = jh_q.front();
+        jh_q.pop();
+
+        if (y == r - 1 || y == 0 || x == c - 1 || x == 0) {
+            return jh[y][x];
+        }
+
+        for (int w = 0; w < 4; ++w) {
+            int ny = y + dy[w];
+            int nx = x + dx[w];
+            if (ny < 0 || r <= ny || nx < 0 || c <= nx) continue;
+            if (map[ny][nx] == '#' || jh[ny][nx] != 0) continue;
+            if (jh[y][x] + 1 >= fire[ny][nx]) continue;
+
+            jh[ny][nx] = jh[y][x] + 1;
+            jh_q.push({ny, nx});
+        }
+    }
+
+    // for (int i = 0; i < r; ++i) {
+    //     for (int j = 0; j < c; ++j){
+    //         cout << fire[i][j] << " ";
+    //     }
+    //     cout << "\n\n";
+    // }
+    // for (int i = 0; i < r; ++i) {
+    //     for (int j = 0; j < c; ++j){
+    //         cout << jh[i][j] << " ";
+    //     }
+    //     cout << "\n\n";
+    // }
+
+    return -1;
 }
 
 int main() {
-    int result = Solution();
-    if (result == -1)
-        cout << "IMPOSSIBLE";
+    int ret = Solution();
+    if (ret != -1)
+        cout << ret;
     else
-        cout << result;
+        cout << "IMPOSSIBLE";
+
     return 0;
 }
