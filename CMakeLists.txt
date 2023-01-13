@@ -262,4 +262,6 @@ add_executable(backjoon-17837 backjoon/17837-NewGame2.cc) # 22.10.26            
 add_executable(backjoon-17822 backjoon/17822-RotateDisk.cc) # 22.11.10                #원판 돌리기
 add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불
 add_executable(backjoon-15686V2 backjoon/15686-DeliveryChickenV2.cc) # 23.01.10                #불
+add_executable(backjoon-2636 backjoon/2636-Cheese.cc) # 23.01.13                #치즈
+
 
