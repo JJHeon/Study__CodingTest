@@ -13,7 +13,7 @@ add_definitions("-g -Wall -std=c++17")
 
 # Varaible
 set(OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/bin)
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=1274976")
+# set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-z,stack-size=1274976") # MAC OS Problems
 
 # BackJoon  -----------------------------------------------------------------------------------------
 # 21.01.06  #03109  #뱀
@@ -189,7 +189,7 @@ add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감�
 add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작
 add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp) # 21.02.11	#드래곤 커브
 add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달
-add_executable(backjoon-5373 backjoon/5373-Cubing) # 21.02.23  #큐빙
+add_executable(backjoon-5373 backjoon/5373-Cubing.cpp) # 21.02.23  #큐빙
 add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
 add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
@@ -263,5 +263,3 @@ add_executable(backjoon-17822 backjoon/17822-RotateDisk.cc) # 22.11.10          
 add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불
 add_executable(backjoon-15686V2 backjoon/15686-DeliveryChickenV2.cc) # 23.01.10                #불
 add_executable(backjoon-2636 backjoon/2636-Cheese.cc) # 23.01.13                #치즈
-
-
