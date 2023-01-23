@@ -1,22 +1,21 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
-string s;
+string s, temp;
 int main() {
     cin >> s;
 
-    int mid = s.size() / 2;
-    int lst = s.size() - 1;
-    for (int i = 0; i <= mid; ++i) {
-        if(s[i] != s[lst - i]){
-            cout << "0\n";
-            return 0;
-        }
-    }
+    temp = s;
+    reverse(temp.begin(), temp.end());
 
-    cout << "1\n";
+    if (temp == s)
+        cout << 1 << "\n";
+    else
+        cout << 0 << "\n";
+
     return 0;
 }
