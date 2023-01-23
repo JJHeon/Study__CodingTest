@@ -266,3 +266,6 @@ add_executable(backjoon-15686V2 backjoon/15686-DeliveryChickenV2.cc) # 23.01.10 
 add_executable(backjoon-2636 backjoon/2636-Cheese.cc) # 23.01.13                #치즈
 add_executable(backjoon-2309 backjoon/2309-SevenDwarf.cc) # 23.01.23                #일곱난쟁이
 add_executable(backjoon-10808 backjoon/10808-AlphabatNumber.cc) # 23.01.23                #알파벳 개수
+add_executable(backjoon-2979 backjoon/2979-TruckParking.cc) # 23.01.23                #트럭 주차
+
+
