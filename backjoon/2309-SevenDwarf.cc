@@ -4,40 +4,35 @@
 
 using namespace std;
 int dwarf[9];
-int n, r;
-
-void combi(int start, vector<int> v){
-    if(v.size() == r){
-        int sum = 0;
-        for (auto l : v){
-            sum += l;
-        } 
-        if (sum == 100) {
-          sort(v.begin(), v.end());
-          for (int i = 0; i < v.size(); i++) cout << v[i] << " ";
-          exit(0);
+int n = 9, r = 2;
+int sum;
+pair<int, int> pick;
+void solve() {
+    for (int i = 0; i < 9; ++i){
+        for (int j = 0; j < i; j++){
+            if(sum - dwarf[i]-  dwarf[j] == 100){
+                pick = {i, j};
+                return;
+            }
         }
-
-        return;
-    }
-
-    for (int i = start + 1; i < n; ++i){
-        v.push_back(dwarf[i]);
-        combi(i, v);
-        v.pop_back();
     }
 }
 
-
-
 int main(){
-    n = 9;
-    r = 7;
-    for (int i = 0; i < 9; ++i)
-        cin >> dwarf[i];
-
     vector<int> v;
-    combi(-1, v);
+    for (int i = 0; i < 9; ++i) {
+        cin >> dwarf[i];
+        sum += dwarf[i];
+    }
+    solve();
+    for (int i = 0; i < 9; i++){
+        if(pick.first == i || pick.second == i) continue;
+        v.push_back(dwarf[i]);
+    }
+
+    sort(v.begin(), v.end());
+    for (auto i : v) cout << i << " ";
+    
 
     return 0;
 }
