@@ -273,3 +273,4 @@ add_executable(backjoon-11655 backjoon/11655-ROT13.cc) # 23.01.23               
 add_executable(backjoon-9996 backjoon/9996-MissKorea.cc) # 23.01.23                #한국이 그리울 땐 써버에 접속하지
 add_executable(backjoon-2559 backjoon/2559-Progression.cc) # 23.01.24                #수열
 add_executable(backjoon-1620 backjoon/1620-ImPoketmonMaster.cc) # 23.01.24                #나는야 포켓몬 마스터 이다솜
+add_executable(backjoon-9375 backjoon/9375-FashionKingSinHaeBin.cc) # 23.01.26                #패션왕 신해빈
