@@ -275,3 +275,4 @@ add_executable(backjoon-2559 backjoon/2559-Progression.cc) # 23.01.24           
 add_executable(backjoon-1620 backjoon/1620-ImPoketmonMaster.cc) # 23.01.24                #나는야 포켓몬 마스터 이다솜
 add_executable(backjoon-9375 backjoon/9375-FashionKingSinHaeBin.cc) # 23.01.26                #패션왕 신해빈
 add_executable(backjoon-1213 backjoon/1213-MakePelinDrom.cc) # 23.01.26                #팰린드롬 만들기
+add_executable(backjoon-1940 backjoon/1940-JooMong.cc) # 23.01.30                #주몽
