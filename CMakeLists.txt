@@ -277,3 +277,4 @@ add_executable(backjoon-9375 backjoon/9375-FashionKingSinHaeBin.cc) # 23.01.26  
 add_executable(backjoon-1213 backjoon/1213-MakePelinDrom.cc) # 23.01.26                #팰린드롬 만들기
 add_executable(backjoon-1940 backjoon/1940-JooMong.cc) # 23.01.30                #주몽
 add_executable(backjoon-1629 backjoon/1629-Multiply.cc) # 23.01.31                #곱셈
+add_executable(backjoon-4375 backjoon/4375-one.cc) # 23.01.31                #1
