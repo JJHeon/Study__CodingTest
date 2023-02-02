@@ -3,59 +3,39 @@
 
 using namespace std;
 
-int a[26];
-string s;
-string rst;
+int a[200];
+string s, ret;
+char mid;
+int flag;
 
-int main () {
+int main() {
     cin >> s;
     for (auto c : s) {
-        a[c - 'A']++;
+        a[c]++;
     }
 
-    int maximum = -1;
-    int max_index = -1;
-    int count_odd = 0;
-    bool odd = s.length() % 2 == 1 ? true : false;
-    for (int i = 0; i < 26; ++i) {
-        if(odd){
-            if(a[i] % 2 != 0){
-                count_odd++;
-                if(count_odd == 2) {
-                    cout << "I'm Sorry Hansoo";
-                    return 0;
-                }
+    for (int i = 'Z'; i >= 'A'; --i) {
+        if (a[i]) {
+            if (a[i] & 1) {
+                flag++;
+                mid = char(i);
+                a[i]--;
             }
-        }
-        else{
-            if(a[i] % 2 != 0) {
-                cout << "I'm Sorry Hansoo";
-                return 0;
-            }
-        }
-        if (maximum <= a[i]){
-            max_index = i;
-            maximum = a[i];
-        }
-    }
-
-    for (int i = 0; i < s.length() / 2; ++i){
-        for (int j = 0; j < 26; ++j){
-            if(a[j] > 1){
-                s[i] = 'A' + j;
-                s[s.length() - 1 - i] = 'A' + j;
-                a[j] -= 2;
-
-                break;
+            if (flag == 2) break;
+            for (int j = 0; j < a[i]; j += 2) {
+                ret = char(i) + ret;
+                ret += char(i);
             }
         }
     }
-    for (int i = 0; i < 26; ++i){
-        if(a[i] > 0) {
-            s[s.length() / 2] = 'A' + i;
-        }
+    if (flag == 2) {
+        cout << "I'm Sorry Hansoo";
+        return 0;
     }
-    cout << s << "\n";
+    if (mid)
+        ret.insert(ret.begin() + ret.size() / 2, mid);
+
+    cout << ret << "\n";
 
     return 0;
 }
