@@ -14,31 +14,21 @@ int dy[4] = {-1, 0, 1, 0};
 int dx[4] = {0, 1, 0, -1};
 constexpr int SQ = -1;
 
-void bfs(int y, int x) {
-    int cnt = 0;
-    queue<pair<int, int>> q;
-
-    cnt += 1;
+int dfs(int y, int x) {
     visited[y][x] = 1;
-    q.push({y, x});
 
-    while (!q.empty()) {
-        auto [yy, xx] = q.front();
-        q.pop();
+    int cnt = 1;
+    for (int w = 0; w < 4; ++w) {
+        int ny = y + dy[w];
+        int nx = x + dx[w];
 
-        for (int w = 0; w < 4; ++w) {
-            int ny = yy + dy[w];
-            int nx = xx + dx[w];
-            if (ny < 0 || m <= ny || nx < 0 || n <= nx) continue;
-            if (map[ny][nx] == SQ) continue;
-            if (visited[ny][nx]) continue;
+        if (ny < 0 || m <= ny || nx < 0 || n <= nx) continue;
+        if (map[ny][nx] == SQ) continue;
+        if (visited[ny][nx]) continue;
 
-            visited[ny][nx] = 1;
-            q.push({ny, nx});
-            cnt += 1;
-        }
+        cnt += dfs(ny, nx);
     }
-    rst.push_back(cnt);
+    return cnt;
 }
 
 int main() {
@@ -53,7 +43,7 @@ int main() {
         for (int j = 0; j < n; ++j) {
             if (visited[i][j] || map[i][j] == SQ) continue;
 
-            bfs(i, j);
+            rst.push_back(dfs(i, j));
         }
     }
     sort(rst.begin(), rst.end());
