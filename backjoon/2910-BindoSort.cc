@@ -6,38 +6,30 @@
 using namespace std;
 
 int n, c;
-int mp[1002];
-int visited[1002];
+int ap[1002];
 vector<pair<int, int>> v;
-
-int dfs(int x) {
-    visited[x] = 1;
-    int cnt = 1;
-    for (int i = x + 1; i < n; ++i) {
-        if (visited[i] || mp[x] != mp[i]) continue;
-
-        cnt += dfs(i);
-    }
-    return cnt;
-}
-
+map<int, int> mp, mp_ix;
+int input;
 int main() {
     cin >> n >> c;
-    for (int i = 0; i < n; ++i) cin >> mp[i];
-
     for (int i = 0; i < n; ++i) {
-        if (visited[i]) continue;
-        int urst = dfs(i);
-        v.push_back({mp[i], urst});
+        cin >> input;
+        mp[input]++;
+        if (mp_ix[input] == 0) mp_ix[input] = i + 1;
     }
-
-    stable_sort(v.begin(), v.end(), [](pair<int, int> a, pair<int, int> b) -> bool {
-        return a.second > b.second;
+    for (auto p : mp) {
+        v.push_back({p.second, p.first});
+    }
+    sort(v.begin(), v.end(), [](auto pa, auto pb) -> bool {
+        if (pa.first == pb.first) {
+            return mp_ix[pa.second] < mp_ix[pb.second];
+        }
+        return pa.first > pb.first;
     });
 
     for (auto p : v) {
-        for (int i = 0; i < p.second; i++) {
-            cout << p.first << " ";
+        for (int i = 0; i < p.first; i++) {
+            cout << p.second << " ";
         }
     }
     return 0;
