@@ -285,3 +285,4 @@ add_executable(backjoon-4659 backjoon/4659-PronouncePassword.cc) # 23.02.07     
 add_executable(backjoon-2870 backjoon/2870-MathHomework.cc) # 23.02.09                #수학 숙제
 add_executable(backjoon-10709 backjoon/10709-WeatherCaster.cc) # 23.02.09                #기상캐스터
 add_executable(backjoon-3474 backjoon/3474-ProfessorHyunWoo.cc) # 23.02.10                #교수가 된 현우
+add_executable(backjoon-2852 backjoon/2852-NbaBasketBall.cc) # 23.02.10                #NBA 농구
