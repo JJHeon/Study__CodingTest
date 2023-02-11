@@ -286,3 +286,4 @@ add_executable(backjoon-2870 backjoon/2870-MathHomework.cc) # 23.02.09          
 add_executable(backjoon-10709 backjoon/10709-WeatherCaster.cc) # 23.02.09                #기상캐스터
 add_executable(backjoon-3474 backjoon/3474-ProfessorHyunWoo.cc) # 23.02.10                #교수가 된 현우
 add_executable(backjoon-2852 backjoon/2852-NbaBasketBall.cc) # 23.02.10                #NBA 농구
+add_executable(backjoon-1436 backjoon/1436-MovieDirector.cc) # 23.02.11                #영화감독 숌
