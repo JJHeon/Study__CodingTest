@@ -288,4 +288,5 @@ add_executable(backjoon-3474 backjoon/3474-ProfessorHyunWoo.cc) # 23.02.10      
 add_executable(backjoon-2852 backjoon/2852-NbaBasketBall.cc) # 23.02.10                #NBA 농구
 add_executable(backjoon-1436 backjoon/1436-MovieDirector.cc) # 23.02.11                #영화감독 숌
 add_executable(backjoon-9012 backjoon/9012-Parenthesis.cc) # 23.02.11                #괄호
-add_executable(backjoon-4949 backjoon/4949-BalancedWorld.cc) # 23.02.11                #균형잡힌 세ㅇ
+add_executable(backjoon-4949 backjoon/4949-BalancedWorld.cc) # 23.02.11                #균형잡힌 세상
+add_executable(backjoon-1068 backjoon/1068-Tree.cc) # 23.02.11                #트리
