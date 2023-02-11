@@ -281,3 +281,6 @@ add_executable(backjoon-4375 backjoon/4375-one.cc) # 23.01.31                #1
 add_executable(backjoon-1012 backjoon/1012-OrganicCabbage.cc) # 23.02.01                #유기농배추
 add_executable(backjoon-1992 backjoon/1992-QuardTree.cc) # 23.02.02                #쿼드트리
 add_executable(backjoon-2828 backjoon/2828-TakeAppleInBoxGame.cc) # 23.02.02                #사과 담기 게임
+add_executable(backjoon-3986 backjoon/3986-GoodWord.cc) # 23.02.05                #좋은 단어
+add_executable(backjoon-2910 backjoon/2910-BindoSort.cc) # 23.02.07                #빈도 정렬
+add_executable(backjoon-4659 backjoon/4659-PronouncePassword.cc) # 23.02.07                #비밀번호 발음하기
