@@ -1,34 +1,37 @@
 #include <iostream>
 #include <string>
 #include <stack>
-#include <vector>
 
 using namespace std;
 
 int t;
 string s;
-vector<string> rst;
+
+bool check(string s) {
+    stack<char> stk;
+    for (char c : s) {
+        if (c == '(')
+            stk.push(c);
+        else {
+            if (!stk.empty())
+                stk.pop();
+            else
+                return false;
+        }
+    }
+    return stk.empty();
+}
 
 int main() {
     cin >> t;
     for (int i = 0; i < t; ++i) {
         cin >> s;
 
-        stack<int> stk;
-        for (int j = 0; j < s.length(); ++j) {
-            if (stk.size() && s[j] == ')' && stk.top() == '(')
-                stk.pop();
-            else
-                stk.push(s[j]);
-        }
-
-        if (stk.size())
-            rst.push_back("NO");
+        if (check(s))
+            cout << "YES\n";
         else
-            rst.push_back("YES");
-        
+            cout << "NO\n";
     }
 
-    for (auto str : rst) cout << str << "\n";
     return 0;
 }
