@@ -292,3 +292,4 @@ add_executable(backjoon-1436 backjoon/1436-MovieDirector.cc) # 23.02.11         
 add_executable(backjoon-9012 backjoon/9012-Parenthesis.cc) # 23.02.11                #괄호
 add_executable(backjoon-4949 backjoon/4949-BalancedWorld.cc) # 23.02.11                #균형잡힌 세상
 add_executable(backjoon-1068 backjoon/1068-Tree.cc) # 23.02.11                #트리
+add_executable(backjoon-1325 backjoon/1325-EfficientHacking.cc) # 23.02.12                #효율적인 해킹
