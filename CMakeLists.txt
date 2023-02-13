@@ -191,7 +191,7 @@ add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사�
 add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp) # 21.02.11	#드래곤 커브
 add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달
 add_executable(backjoon-5373 backjoon/5373-Cubing.cpp) # 21.02.23  #큐빙
-add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동
+add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동 #Renew1 23.02.13
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
 add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
 add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc) # 22.03.05 #평범한 배낭
