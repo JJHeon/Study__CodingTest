@@ -1,52 +1,68 @@
 #include <iostream>
-#include <vector>
-#include <queue>
-#include <tuple>
+
+#include <string>
+
 #include <algorithm>
 
+#include <queue>
+
+#include <tuple>
+
 using namespace std;
-int V, H;
-int main() {
-    const int offset_y[4] = {-1, 0, 1, 0};
-    const int offset_x[4] = {0, 1, 0, -1};
 
-    cin >> V >> H;
+int n, m;
+string s[52];
+int visited[52][52];
+int rst;
+int dy[4] = {-1, 0, 1, 0};
+int dx[4] = {0, 1, 0, -1};
 
-    vector<vector<char>> map(V, vector<char>(H, 0));
-    for (int i = 0; i < V; ++i)
-        for (int j = 0; j < H; ++j) cin >> map[i][j];
+int bfs(int i, int j) {
+    int mx = 0;
+    queue<tuple<int, int, int>> q;
 
-    int result = 0;
+    visited[i][j] = 1;
+    q.push(make_tuple(i, j, 1));
 
-    for (int i = 0; i < V; ++i) {
-        for (int j = 0; j < H; ++j) {
-            if (map[i][j] == 'W') continue;
+    while (!q.empty()) {
+        auto [y, x, c] = q.front();
+        q.pop();
 
-            int max_dist = 0;
-            vector<vector<int>> visited(V, vector<int>(H, 0));
-            queue<tuple<int, int, int>> q;
-            q.push(make_tuple(i, j, 1));
+        for (int w = 0; w < 4; ++w) {
+            int ny = y + dy[w];
+            int nx = x + dx[w];
 
-            while (!q.empty()) {
-                auto [y, x, d] = q.front();
-                q.pop();
-                if (visited[y][x]) continue;
-                visited[y][x] = d;
-                max_dist = max(d, max_dist);
+            if (ny < 0 || n <= ny || nx < 0 || m <= nx) continue;
+            if (s[ny][nx] == 'W') continue;
+            if (visited[ny][nx]) continue;
 
-                for (int way = 0; way < 4; ++way) {
-                    int next_y = y + offset_y[way];
-                    int next_x = x + offset_x[way];
-                    if (next_y < 0 || V <= next_y || next_x < 0 || H <= next_x) continue;
-                    if (map[next_y][next_x] == 'W') continue;
-
-                    q.push(make_tuple(next_y, next_x, d + 1));
-                }
-            }
-            result = max(max_dist, result);
+            visited[ny][nx] = c + 1;
+            q.push(make_tuple(ny, nx, c + 1));
+            mx = max(mx, c + 1);
         }
     }
-    if (result != 0) result -= 1;
-    cout << result << "\n";
+
+    return mx - 1 < 0 ? 0 : mx - 1;
+}
+
+int main() {
+    cin >> n >> m;
+
+    for (int i = 0; i < n; ++i)
+
+        cin >> s[i];
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if (s[i][j] == 'L') {
+                fill(&visited[0][0], &visited[0][0] + 52 * 52, 0);
+
+                rst = max(bfs(i, j), rst);
+            }
+        }
+    }
+
+    cout << rst;
+
     return 0;
 }
