@@ -24,7 +24,7 @@ set(OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/bin)
 # 21.02.02  #14499	#주사위 굴리기
 # 21.02.04  #14500  #테트로미노
 # 21.02.06  #14501	#퇴사
-# 21.02.07  #14502	#연구소
+# 21.02.07  #14502	#연구소 #(Renew1 23.02.12)
 # 21.02.07  #14503	#로봇 청소기
 # 21.02.07  #14888	#연산자 끼워넣기
 # 21.02.08  #14889	#스타트와 링크
@@ -33,7 +33,7 @@ set(OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/bin)
 # 21.02.11  #15683	#감시
 # 21.02.11  #15684	#사다리 조작
 # 21.02.11  #15685	#드래곤 커브
-# 21.02.11  #15686	#치킨 배달
+# 21.02.11  #15686	#치킨 배달 #(Renew1 23.01.10)
 # 21.02.23  #05373  #큐빙
 # 21.02.27  #16235	#인구이동
 # 22.06.25  #11507  #카드셋트
@@ -74,10 +74,10 @@ set(OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/bin)
 # 22.07.14  #02563  #빙산
 # 22.07.18  #09205  #맥주 마시며 걷기
 # 22.07.18  #01747  #소수&팰린드롬
-# 22.07.18  #02589  #보물섬
+# 22.07.18  #02589  #보물섬 #(Renew1 23.02.13)
 # 22.07.18  #07562  #나이트의 이동
 # 22.07.18  #07576  #토마토
-# 22.07.19  #02583  #영역 구하기
+# 22.07.19  #02583  #영역 구하기 #(Renew1 23.02.06) #(Renew2 23.02.06)
 # 22.07.19  #01655  #가운데를 말해요
 # 22.07.19  #11050  #이항 계수 1
 # 22.07.19  #11051  #이항 계수 2
@@ -180,7 +180,7 @@ add_executable(backjoon-13460 backjoon/13460-ExitBead.cpp) # 21.02.02	#구슬 �
 add_executable(backjoon-14499 backjoon/14499-RollDice.cpp) # 21.02.02	#주사위 굴리기
 add_executable(backjoon-14500 backjoon/14500-Tetronomino.cpp) # 21.02.04  #테트로미노
 add_executable(backjoon-14501 backjoon/14501-Resigned.cpp) # 21.02.06	#퇴사
-add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp) # 21.02.07	#연구소
+add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp) # 21.02.07	#연구소 #(Renew1 23.02.12)
 add_executable(backjoon-14503 backjoon/14503-RobotCleaner.cpp) # 21.02.07	#로봇 청소기
 add_executable(backjoon-14888 backjoon/14888-AddOperator.cpp) # 21.02.07	#연산자 끼워넣기
 add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스타트와 링크
@@ -189,9 +189,9 @@ add_executable(backjoon-14891 backjoon/14891-Gear.cpp) # 21.02.09	#톱니바퀴
 add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감시
 add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작
 add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp) # 21.02.11	#드래곤 커브
-add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달
+add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달 #(Renew1 23.01.10)
 add_executable(backjoon-5373 backjoon/5373-Cubing.cpp) # 21.02.23  #큐빙
-add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동 #Renew1 23.02.13
+add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인구이동 #(Renew1 23.02.13)
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
 add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
 add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc) # 22.03.05 #평범한 배낭
@@ -231,10 +231,10 @@ add_executable(backjoon-2468 backjoon/2468-SafeZone.cc) # 22.07.13              
 add_executable(backjoon-2563 backjoon/2563-IceMountain.cc) # 22.07.14                   #빙산
 add_executable(backjoon-9205 backjoon/9205-WalkingWithBear.cc) # 22.07.18               #맥주 마시며 걷기
 add_executable(backjoon-1747 backjoon/1747-PrimeNumberAndPalindrome.cc) # 22.07.18               #소수&팰린드롬
-add_executable(backjoon-2589 backjoon/2589-TreasureIsland.cc) # 22.07.18               #보물섬
+add_executable(backjoon-2589 backjoon/2589-TreasureIsland.cc) # 22.07.18               #보물섬 #(Renew1 23.02.13)
 add_executable(backjoon-7562 backjoon/7562-MoveOfKnight.cc) # 22.07.18               #나이트의 이동
 add_executable(backjoon-7576 backjoon/7576-Tomato.cc) # 22.07.18               #토마토
-add_executable(backjoon-2583 backjoon/2583-DrawArea.cc) # 22.07.19               #영역 구하기
+add_executable(backjoon-2583 backjoon/2583-DrawArea.cc) # 22.07.19               #영역 구하기 #(Renew1 23.02.06) #(Renew2 23.02.06)
 add_executable(backjoon-1655 backjoon/1655-SayMiddleNumber.cc) # 22.07.19               #가운데를 말해요
 add_executable(backjoon-11050 backjoon/11050-BinomialCoefficient1.cc) # 22.07.19               #이항 계수 1
 add_executable(backjoon-11051 backjoon/11051-BinomialCoefficient2.cc) # 22.07.19               #이항 계수 2
@@ -261,7 +261,7 @@ add_executable(backjoon-17142 backjoon/17142-Lab3.cc) # 22.10.20                
 add_executable(backjoon-17779 backjoon/17779-GeryMendering.cc) # 22.10.24                #게리맨더링 2
 add_executable(backjoon-17837 backjoon/17837-NewGame2.cc) # 22.10.26                #새로운 게임 2
 add_executable(backjoon-17822 backjoon/17822-RotateDisk.cc) # 22.11.10                #원판 돌리기
-add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불
+add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불 #(Renew1 23.01.09)
 add_executable(backjoon-15686V2 backjoon/15686-DeliveryChickenV2.cc) # 23.01.10                #불
 add_executable(backjoon-2636 backjoon/2636-Cheese.cc) # 23.01.13                #치즈
 add_executable(backjoon-2309 backjoon/2309-SevenDwarf.cc) # 23.01.23                #일곱난쟁이
@@ -289,7 +289,7 @@ add_executable(backjoon-10709 backjoon/10709-WeatherCaster.cc) # 23.02.09       
 add_executable(backjoon-3474 backjoon/3474-ProfessorHyunWoo.cc) # 23.02.10                #교수가 된 현우
 add_executable(backjoon-2852 backjoon/2852-NbaBasketBall.cc) # 23.02.10                #NBA 농구
 add_executable(backjoon-1436 backjoon/1436-MovieDirector.cc) # 23.02.11                #영화감독 숌
-add_executable(backjoon-9012 backjoon/9012-Parenthesis.cc) # 23.02.11                #괄호
+add_executable(backjoon-9012 backjoon/9012-Parenthesis.cc) # 23.02.11                #괄호 #(Renew1 23.02.13)
 add_executable(backjoon-4949 backjoon/4949-BalancedWorld.cc) # 23.02.11                #균형잡힌 세상
 add_executable(backjoon-1068 backjoon/1068-Tree.cc) # 23.02.11                #트리
 add_executable(backjoon-1325 backjoon/1325-EfficientHacking.cc) # 23.02.12                #효율적인 해킹
