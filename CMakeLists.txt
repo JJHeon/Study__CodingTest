@@ -297,3 +297,4 @@ add_executable(backjoon-17298 backjoon/17298-FiveBigNumber.cc) # 23.02.13       
 add_executable(backjoon-12851 backjoon/12851-HideAndSeek2.cc) # 23.02.16                #숨바꼭질2
 add_executable(backjoon-13913 backjoon/13913-HideAndSeek4.cc) # 23.02.16                #숨바꼭질4
 add_executable(backjoon-17071 backjoon/17071-HideAndSeek5.cc) # 23.02.17                #숨바꼭질5
+add_executable(backjoon-14497 backjoon/14497-JunanNan.cc) # 23.02.17                #주난의 난
