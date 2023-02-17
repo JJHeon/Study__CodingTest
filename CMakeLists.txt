@@ -295,3 +295,4 @@ add_executable(backjoon-1068 backjoon/1068-Tree.cc) # 23.02.11                #�
 add_executable(backjoon-1325 backjoon/1325-EfficientHacking.cc) # 23.02.12                #효율적인 해킹
 add_executable(backjoon-17298 backjoon/17298-FiveBigNumber.cc) # 23.02.13                #오큰수 #(Renew1 23.02.13)
 add_executable(backjoon-12851 backjoon/12851-HideAndSeek2.cc) # 23.02.16                #숨바꼭질2
+add_executable(backjoon-13913 backjoon/13913-HideAndSeek4.cc) # 23.02.16                #숨바꼭질4
