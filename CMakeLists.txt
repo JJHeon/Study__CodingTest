@@ -300,4 +300,4 @@ add_executable(backjoon-17071 backjoon/17071-HideAndSeek5.cc) # 23.02.17        
 add_executable(backjoon-14497 backjoon/14497-JunanNan.cc) # 23.02.17                #주난의 난
 add_executable(backjoon-3197 backjoon/3197-LakeOfSwan.cc) # 23.02.19                #백조의 호수
 add_executable(backjoon-1987 backjoon/1987-Alphabat.cc) # 23.02.19                #알파벳
-add_executable(backjoon-2529 backjoon/2529-InequalitySign.cc) # 23.02.19                #부등호
+add_executable(backjoon-2529 backjoon/2529-InequalitySign.cc) # 23.02.19                #부등호 #(Renew1 23.02.19)

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <cstdint>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -10,6 +12,7 @@ int visit[10];
 string s;
 string rstmn = "9999999999";
 string rstmx = "0";
+vector<string> rst;
 
 bool check(char a, char b, char op) {
     if (op == '>')
@@ -20,29 +23,21 @@ bool check(char a, char b, char op) {
 
 void dfs(int cnt) {
     if (cnt == k + 1) {
-        bool success = true;
-        for (int i = 0; i < s.length() - 1; ++i) {
-            if (!check(s[i], s[i + 1], oper[i])) {
-                success = false;
-                break;
-            }
-        }
-        if (success) {
-            rstmx = atoll(s.c_str()) > atoll(rstmx.c_str()) ? s : rstmx;
-            rstmn = atoll(s.c_str()) < atoll(rstmn.c_str()) ? s : rstmn;
-        }
-
+        rst.push_back(s);
         return;
     }
 
     for (int i = 0; i <= 9; ++i) {
         if (visit[i]) continue;
+        if (cnt == 0 || check(s[cnt - 1], i + '0', oper[cnt - 1])) {
+            visit[i] = 1;
+            s.push_back('0' + i);
 
-        visit[i] = 1;
-        s.push_back('0' + i);
-        dfs(cnt + 1);
-        visit[i] = 0;
-        s.pop_back();
+            dfs(cnt + 1);
+
+            visit[i] = 0;
+            s.pop_back();
+        }
     }
 }
 
@@ -52,8 +47,8 @@ int main() {
 
     dfs(0);
 
-    cout << rstmx << "\n"
-         << rstmn << "\n";
-
+    sort(rst.begin(), rst.end());
+    cout << rst[rst.size() - 1] << "\n";
+    cout << rst[0] << "\n";
     return 0;
 }
