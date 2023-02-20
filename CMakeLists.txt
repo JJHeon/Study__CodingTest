@@ -187,7 +187,7 @@ add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스�
 add_executable(backjoon-14890 backjoon/14890-Slope.cpp) # 21.02.09	#경사로
 add_executable(backjoon-14891 backjoon/14891-Gear.cpp) # 21.02.09	#톱니바퀴
 add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감시
-add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작
+add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작 #(Renew1 23.02.20)
 add_executable(backjoon-15685 backjoon/15685-DragonCurve.cpp) # 21.02.11	#드래곤 커브
 add_executable(backjoon-15686 backjoon/15686-DeliveryChicken.cpp) # 21.02.11	#치킨 배달 #(Renew1 23.01.10)
 add_executable(backjoon-5373 backjoon/5373-Cubing.cpp) # 21.02.23  #큐빙
