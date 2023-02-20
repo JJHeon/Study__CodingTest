@@ -303,3 +303,4 @@ add_executable(backjoon-1987 backjoon/1987-Alphabat.cc) # 23.02.19              
 add_executable(backjoon-2529 backjoon/2529-InequalitySign.cc) # 23.02.19                #부등호 #(Renew1 23.02.19)
 add_executable(backjoon-9934 backjoon/9934-CompletBinaryTree.cc) # 23.02.19                #완전 이진 트리
 add_executable(backjoon-14620 backjoon/14620-FlowerRoad.cc) # 23.02.20                #꽃길
+add_executable(backjoon-1189 backjoon/1189-ComeBackHome.cc) # 23.02.20                #컴백홈
