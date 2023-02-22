@@ -184,7 +184,7 @@ add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp) # 21.02.07	#연
 add_executable(backjoon-14503 backjoon/14503-RobotCleaner.cpp) # 21.02.07	#로봇 청소기
 add_executable(backjoon-14888 backjoon/14888-AddOperator.cpp) # 21.02.07	#연산자 끼워넣기
 add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스타트와 링크
-add_executable(backjoon-14890 backjoon/14890-Slope.cpp) # 21.02.09	#경사로
+add_executable(backjoon-14890 backjoon/14890-Slope.cpp) # 21.02.09	#경사로 #(Renew1 23.02.22)
 add_executable(backjoon-14891 backjoon/14891-Gear.cpp) # 21.02.09	#톱니바퀴
 add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감시
 add_executable(backjoon-15684 backjoon/15684-ControlLadder.cpp) # 21.02.11	#사다리 조작 #(Renew1 23.02.20)
@@ -306,4 +306,4 @@ add_executable(backjoon-14620 backjoon/14620-FlowerRoad.cc) # 23.02.20          
 add_executable(backjoon-1189 backjoon/1189-ComeBackHome.cc) # 23.02.20                #컴백홈
 add_executable(backjoon-19942 backjoon/19942-Diet.cc) # 23.02.21                #다이어트
 add_executable(backjoon-1285 backjoon/1285-FlipTheCoin.cc) # 23.02.21                #동전던지기(못풀음)
-add_executable(backjoon-17471 backjoon/17471-GaryMendering.cc) # 23.02.21                #게리멘더링
+add_executable(backjoon-17471 backjoon/17471-GaryMendering.cc) # 23.02.22                #게리멘더링
