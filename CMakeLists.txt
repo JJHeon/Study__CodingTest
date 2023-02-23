@@ -308,3 +308,4 @@ add_executable(backjoon-19942 backjoon/19942-Diet.cc) # 23.02.21                
 add_executable(backjoon-1285 backjoon/1285-FlipTheCoin.cc) # 23.02.21                #동전던지기(못풀음)
 add_executable(backjoon-17471 backjoon/17471-GaryMendering.cc) # 23.02.22                #게리멘더링
 add_executable(backjoon-1062 backjoon/1062-Teach.cc) # 23.02.23                #가르침
+add_executable(backjoon-1094 backjoon/1094-Stick.cc) # 23.02.23                #막대기
