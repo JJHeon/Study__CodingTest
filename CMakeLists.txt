@@ -312,3 +312,4 @@ add_executable(backjoon-1094 backjoon/1094-Stick.cc) # 23.02.23                #
 add_executable(backjoon-11723 backjoon/11723-Set.cc) # 23.02.25                #집합
 add_executable(backjoon-14391 backjoon/14391-PieceOfPaper.cc) # 23.02.25                #종이 조각(못풀음)
 add_executable(backjoon-13244 backjoon/13244-Tree.cc) # 23.02.25                #Tree
+add_executable(backjoon-5430 backjoon/5430-AC.cc) # 23.02.25                #AC
