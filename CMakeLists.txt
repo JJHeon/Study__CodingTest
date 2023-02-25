@@ -310,3 +310,4 @@ add_executable(backjoon-17471 backjoon/17471-GaryMendering.cc) # 23.02.22       
 add_executable(backjoon-1062 backjoon/1062-Teach.cc) # 23.02.23                #가르침
 add_executable(backjoon-1094 backjoon/1094-Stick.cc) # 23.02.23                #막대기
 add_executable(backjoon-11723 backjoon/11723-Set.cc) # 23.02.25                #집합
+add_executable(backjoon-14391 backjoon/14391-PieceOfPaper.cc) # 23.02.25                #종이 조각(못풀음)
