@@ -315,3 +315,4 @@ add_executable(backjoon-13244 backjoon/13244-Tree.cc) # 23.02.25                
 add_executable(backjoon-5430 backjoon/5430-AC.cc) # 23.02.25                #AC
 add_executable(backjoon-14405 backjoon/14405-Picachu.cc) # 23.02.28                #피카츄
 add_executable(backjoon-15353 backjoon/15353-BigNumberAB.cc) # 23.02.28                #큰수 A+B(2)
+add_executable(backjoon-15926 backjoon/15926-HyuenUckParenthesis.cc) # 23.03.01                #현욱은 괄호왕이야!!
