@@ -318,3 +318,4 @@ add_executable(backjoon-15353 backjoon/15353-BigNumberAB.cc) # 23.02.28         
 add_executable(backjoon-15926 backjoon/15926-HyuenUckParenthesis.cc) # 23.03.01                #현욱은 괄호왕이야!!
 add_executable(backjoon-3015 backjoon/3015-UnitedOasis.cc) # 23.03.03                #오아시스 재결합
 add_executable(backjoon-2109 backjoon/2109-LectureTour.cc) # 23.03.06                #순회강연(못풀음)
+add_executable(backjoon-9935 backjoon/9935-ExplosionCharacter.cc) # 23.03.06                #문자열 폭발
