@@ -1,44 +1,40 @@
 #include <iostream>
+
 #include <vector>
+
 #include <algorithm>
-#include <utility>
+
 using namespace std;
 
-int N;
-int RESULT;
-vector<pair<int, int>> MEETING;
+int n;
+
+vector<pair<int, int>> v;
+
+vector<pair<int, int>> ans;
+
 int main() {
-    cin >> N;
-    MEETING.resize(N);
-    for (int i = 0; i != N; ++i) {
-        int startTime = 0;
-        int endTime = 0;
+    cin >> n;
 
-        cin >> startTime >> endTime;
-        MEETING[i] = make_pair(startTime, endTime);
+    int st, et;
+
+    for (int i = 0; i < n; ++i) {
+        cin >> st >> et;
+        v.push_back({st, et});
     }
 
-    stable_sort(MEETING.begin(), MEETING.end(), [](const pair<int, int>& meetOne, const pair<int, int>& meetTwo) -> bool {
-        if (meetOne.second < meetTwo.second)
-            return true;
-        else if (meetOne.second > meetTwo.second)
-            return false;
-        else {
-            if (meetOne.first < meetTwo.first)
-                return true;
-            else
-                return false;
-        }
-    });
+    sort(v.begin(), v.end());
 
-    int saveEndTime = 0;
-    for (auto meet : MEETING) {
-        if (saveEndTime <= meet.first) {
-            saveEndTime = meet.second;
-            RESULT++;
-        }
+    ans.push_back(v[0]);
+
+    for (int i = 1; i < v.size(); ++i) {
+        if (ans[ans.size() - 1].second > v[i].second) {
+            ans.pop_back();
+            ans.push_back(v[i]);
+        } else if (ans[ans.size() - 1].second <= v[i].first)
+            ans.push_back(v[i]);
     }
-    cout << RESULT;
+
+    cout << ans.size();
 
     return 0;
 }
