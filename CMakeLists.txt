@@ -320,3 +320,4 @@ add_executable(backjoon-3015 backjoon/3015-UnitedOasis.cc) # 23.03.03           
 add_executable(backjoon-2109 backjoon/2109-LectureTour.cc) # 23.03.06                #순회강연(못풀음)
 add_executable(backjoon-9935 backjoon/9935-ExplosionCharacter.cc) # 23.03.06                #문자열 폭발
 add_executable(backjoon-1781 backjoon/1781-CupNoodle.cc) # 23.03.07                #컵라면
+add_executable(backjoon-14469 backjoon/14469-WhyCowCrossTheRoad3.cc) # 23.03.07                #소가 길을 건너간 이유3
