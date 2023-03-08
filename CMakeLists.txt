@@ -323,3 +323,4 @@ add_executable(backjoon-1781 backjoon/1781-CupNoodle.cc) # 23.03.07             
 add_executable(backjoon-14469 backjoon/14469-WhyCowCrossTheRoad3.cc) # 23.03.07                #소가 길을 건너간 이유3
 add_executable(backjoon-1202 backjoon/1202-JewelThief.cc) # 23.03.07                #보석도둑
 add_executable(backjoon-1644 backjoon/1644-SumOfPrimeNumbers.cc) # 23.03.08                #소수의 연속합
+add_executable(backjoon-13144 backjoon/13144-ListOfUniqueNumbers.cc) # 23.03.08                #List of Unique Numbers
