@@ -325,4 +325,4 @@ add_executable(backjoon-1202 backjoon/1202-JewelThief.cc) # 23.03.07            
 add_executable(backjoon-1644 backjoon/1644-SumOfPrimeNumbers.cc) # 23.03.08                #소수의 연속합
 add_executable(backjoon-13144 backjoon/13144-ListOfUniqueNumbers.cc) # 23.03.08                #List of Unique Numbers
 add_executable(backjoon-3273 backjoon/3273-SumOfTwoNumber.cc) # 23.03.09                #두 수의 합 #Renew1(23.03.09)
-add_executable(backjoon-1700 backjoon/1700-MultitabSchedualing.cc) # 23.03.09                #멀티탭 스케줄링
+add_executable(backjoon-1700 backjoon/1700-MultitabSchedualing.cc) # 23.03.09                #멀티탭 스케줄링 #(Renew1 23.03.09)
