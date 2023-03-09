@@ -1,33 +1,34 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int n;
 int rst;
-int mp[1000002];
-int a[1000002];
 int x;
-int y;
 
 int main() {
     cin >> n;
-    for (int i = 0; i < n; ++i) {
-        cin >> mp[i];
-        a[mp[i]] = 1;
-    }
 
+    vector<int> v(n);
+    for (int i = 0; i < n; ++i)
+        cin >> v[i];
     cin >> x;
-    for (int i = 0; i < n; ++i) {
-        if (mp[i] >= x) continue;
-        int y = abs(mp[i] - x);
-        if (mp[i] == y) continue;
-        if (a[y]) {
-            rst++;
-            a[mp[i]] = 0;
-        }
-    }
 
+    sort(v.begin(), v.end());
+
+    int sp = 0, ep = n - 1;
+    while (sp < ep) {
+        if (v[sp] + v[ep] == x) {
+            ep--;
+            rst++;
+        } else if (v[sp] + v[ep] > x)
+            ep--;
+        else if (v[sp] + v[ep] < x)
+            sp++;
+    }
     cout << rst;
+
     return 0;
 }
