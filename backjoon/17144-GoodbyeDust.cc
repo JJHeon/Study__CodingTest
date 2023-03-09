@@ -1,86 +1,88 @@
 #include <iostream>
+#include <cstring>
 #include <vector>
-#include <cstdio>
 
 using namespace std;
-int R, C, T;
-vector<vector<int>> MAP(51, vector<int>(51, 0));
 
-const int OFFSET_Y[4] = {-1, 0, 1, 0};
-const int OFFSET_X[4] = {0, 1, 0, -1};
+int t, r, c, rst;
+int tt;
+int mp[52][52];
+int tmp[52][52];
+int visit[52][52];
+int y, x;
+int dy[4] = {-1, 0, 1, 0};
+int dx[4] = {0, 1, 0, -1};
+
+typedef struct a_ {
+    int y;
+    int x;
+} a;
+vector<a> v;
 
 int main() {
-    cin >> R >> C >> T;
-    for (int i = 0; i < R; ++i)
-        for (int j = 0; j < C; ++j)
-            cin >> MAP[i][j];
-
-    int c = 0;
-    for (c = 0; c < T; ++c) {
-        vector<vector<int>> TMAP(51, vector<int>(51, 0));
-        for (int i = 0; i < R; ++i) {
-            for (int j = 0; j < C; ++j) {
-                if (MAP[i][j] > 0) {
-                    int count = 0;
-                    int dust = MAP[i][j] / 5;
-                    for (int way = 0; way < 4; ++way) {
-                        int next_i = i + OFFSET_Y[way];
-                        int next_j = j + OFFSET_X[way];
-
-                        if (next_i < 0 || next_i >= R || next_j < 0 || next_j >= C) continue;
-                        if (MAP[next_i][next_j] < 0) continue;
-                        count++;
-                        TMAP[next_i][next_j] += dust;
-                    }
-                    TMAP[i][j] += (MAP[i][j] - (dust * count));
-                } else if (MAP[i][j] == -1)
-                    TMAP[i][j] = MAP[i][j];
-            }
+    cin >> r >> c >> t;
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < c; ++j) {
+            cin >> mp[i][j];
+            if (mp[i][j] == -1) v.push_back({i, j});
         }
-        bool is_first = true;
-        for (int i = 0; i < R; ++i) {
-            if (MAP[i][0] < 0) {
-                if (is_first) {
-                    for (int k = i - 1; k > 0; --k)
-                        TMAP[k][0] = TMAP[k - 1][0];
-                    for (int k = 0; k < C - 1; ++k)
-                        TMAP[0][k] = TMAP[0][k + 1];
-                    for (int k = 0; k < i; ++k)
-                        TMAP[k][C - 1] = TMAP[k + 1][C - 1];
-                    for (int k = C - 1; k > 1; k--)
-                        TMAP[i][k] = TMAP[i][k - 1];
-                    TMAP[i][1] = 0;
-                    is_first = false;
-                } else {
-                    for (int k = i + 1; k < R - 1; ++k)
-                        TMAP[k][0] = TMAP[k + 1][0];
-                    for (int k = 0; k < C - 1; ++k)
-                        TMAP[R - 1][k] = TMAP[R - 1][k + 1];
-                    for (int k = R - 1; k > i; --k)
-                        TMAP[k][C - 1] = TMAP[k - 1][C - 1];
-                    for (int k = C - 1; k > 1; k--)
-                        TMAP[i][k] = TMAP[i][k - 1];
-                    TMAP[i][1] = 0;
+
+    while (tt < t) {
+        memset(tmp, 0, sizeof(tmp));
+        tmp[v[0].y][v[0].x] = -1;
+        tmp[v[1].y][v[1].x] = -1;
+
+        for (int i = 0; i < r; ++i)
+            for (int j = 0; j < c; ++j) {
+                if (mp[i][j] == -1 || mp[i][j] == 0) continue;
+                int cnt = 0;
+                for (int w = 0; w < 4; ++w) {
+                    int ny = i + dy[w];
+                    int nx = j + dx[w];
+
+                    if (ny < 0 || r <= ny || nx < 0 || c <= nx) continue;
+                    if (mp[ny][nx] == -1) continue;
+
+                    tmp[ny][nx] += (mp[i][j] / 5);
+                    cnt++;
                 }
+                tmp[i][j] += (mp[i][j] - (mp[i][j] / 5 * cnt));
             }
-        }
-        MAP.assign(TMAP.begin(), TMAP.end());
-        // //DEBUG
-        // printf("T : %d\n", c);
-        // for (int i = 0; i < R; ++i) {
-        //     for (int j = 0; j < C; ++j){
-        //         printf("%2d  ", MAP[i][j]);
-        //     }
-        //     printf("\n");
+
+        y = v[0].y - 1;
+        x = v[0].x;
+        tmp[y][x] = 0;
+        for (; y - 1 >= 0; --y) tmp[y][x] = tmp[y - 1][x];
+        for (; x + 1 < c; ++x) tmp[y][x] = tmp[y][x + 1];
+        for (; y + 1 <= v[0].y; ++y) tmp[y][x] = tmp[y + 1][x];
+        for (; x - 1 > 0; --x) tmp[y][x] = tmp[y][x - 1];
+        tmp[y][x] = 0;
+
+        y = v[1].y + 1;
+        x = v[1].x;
+        tmp[y][x] = 0;
+        for (; y + 1 < r; ++y) tmp[y][x] = tmp[y + 1][x];
+        for (; x + 1 < c; ++x) tmp[y][x] = tmp[y][x + 1];
+        for (; y - 1 >= v[1].y; --y) tmp[y][x] = tmp[y - 1][x];
+        for (; x - 1 > 0; --x) tmp[y][x] = tmp[y][x - 1];
+        tmp[y][x] = 0;
+
+        memcpy(mp, tmp, sizeof(mp));
+        tt++;
+        // //debug
+        // cout << tt << "\n";
+        // for(int i = 0; i < r; i++) {
+        // 	for(int j  = 0; j < c; ++j) cout << tmp[i][j] << "  ";
+        // 	cout <<"\n";
         // }
-        // printf("\n\n");
+        // cout<<"\n\n";
     }
-    int result = 0;
-    for (int i = 0; i < R; ++i) {
-        for (int j = 0; j < C; ++j) {
-            if (MAP[i][j] > 0) result += MAP[i][j];
+
+    for (int i = 0; i < r; ++i)
+        for (int j = 0; j < c; ++j) {
+            if (mp[i][j] != -1) rst += mp[i][j];
         }
-    }
-    cout << result << endl;
+
+    cout << rst;
     return 0;
 }
