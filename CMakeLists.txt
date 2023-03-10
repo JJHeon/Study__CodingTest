@@ -183,7 +183,7 @@ add_executable(backjoon-14501 backjoon/14501-Resigned.cpp) # 21.02.06	#퇴사
 add_executable(backjoon-14502 backjoon/14502-ResearchCenter.cpp) # 21.02.07	#연구소 #(Renew1 23.02.12)
 add_executable(backjoon-14503 backjoon/14503-RobotCleaner.cpp) # 21.02.07	#로봇 청소기
 add_executable(backjoon-14888 backjoon/14888-AddOperator.cpp) # 21.02.07	#연산자 끼워넣기
-add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스타트와 링크
+add_executable(backjoon-14889 backjoon/14889-StartAndLink.cpp) # 21.02.08	#스타트와 링크 #(Renew1 23.03.10)
 add_executable(backjoon-14890 backjoon/14890-Slope.cpp) # 21.02.09	#경사로 #(Renew1 23.02.22)
 add_executable(backjoon-14891 backjoon/14891-Gear.cpp) # 21.02.09	#톱니바퀴
 add_executable(backjoon-15683 backjoon/15683-Surveillance.cpp) # 21.02.11	#감시
