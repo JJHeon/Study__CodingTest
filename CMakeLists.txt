@@ -174,7 +174,7 @@ add_executable(real programmers/00068-JumpFar.cc)
 
 # Problams -----------------------------------------------------------------------------------------
 add_executable(backjoon-3190 backjoon/3190-Snake.cpp) # 21.01.06  #뱀
-add_executable(backjoon-12100 backjoon/12100-2048.cpp) # 21.01.07  #2048
+add_executable(backjoon-12100 backjoon/12100-2048.cpp) # 21.01.07  #2048 #(Renew1 23.03.11)
 add_executable(backjoon-13458 backjoon/13458-TestSupervisor.cpp) # 21.02.02	#시험 감독
 add_executable(backjoon-13460 backjoon/13460-ExitBead.cpp) # 21.02.02	#구슬 탈출2
 add_executable(backjoon-14499 backjoon/14499-RollDice.cpp) # 21.02.02	#주사위 굴리기
