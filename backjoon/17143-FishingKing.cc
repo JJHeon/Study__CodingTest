@@ -1,102 +1,114 @@
 #include <iostream>
 #include <vector>
-#include <tuple>
+#include <algorithm>
+#include <queue>
 #include <cstring>
-#include <cstdio>
 
 using namespace std;
 
-int R, C, M;
+struct A {
+    int y;
+    int x;
+    int s;
+    int d;
+    int z;
+};
 
-const int OFFSET_Y[4] = {-1, 0, 1, 0};
-const int OFFSET_X[4] = {0, 1, 0, -1};
-const int CONVERT[5] = {0, 0, 2, 1, 3};
-const int REVERSE[4] = {1, 3, 2, 4};
+int mp[102][102];
+int convert[5] = {0, 0, 2, 1, 3};
+int revers[4] = {1, 3, 2, 4};
+
+int rs, cs;
+int r, c, s, d, z, m;
+
+int dy[4] = {-1, 0, 1, 0};
+int dx[4] = {0, 1, 0, -1};
+vector<struct A> v;
+int rst;
 
 int main() {
-    cin >> R >> C >> M;
-    vector<vector<int>> MAP(R + 1, vector<int>(C + 1, 0));
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-    vector<tuple<int, int, int>> SHARK(1);
-    for (int i = 1; i <= M; ++i) {
-        int r, c, s, d, z;
+    cin >> rs >> cs >> m;
+    v.push_back({0, 0, 0, 0, 0});
+    for (int i = 0; i < m; ++i) {
         cin >> r >> c >> s >> d >> z;
-        MAP[r][c] = i;
-        SHARK.push_back(make_tuple(s, d, z));
+        v.push_back({r, c, s, d, z});
+        mp[r][c] = i + 1;
     }
 
-    int shark_get = 0;
-    // 1. Move right
-    for (int t = 1; t <= C; ++t) {
-        // 2. Get Close Shark
-        for (int j = 1; j <= R; ++j)
-            if (MAP[j][t] > 0) {
-                shark_get += get<2>(SHARK[MAP[j][t]]);
-                MAP[j][t] = 0;
+    // // debug
+    // cout << "begin "
+    //      << "\n";
+    // for (int i = 1; i <= rs; i++) {
+    //     for (int j = 1; j <= cs; ++j) cout << mp[i][j] << " ";
+    //     cout << "\n";
+    // }
+    // cout << "\n\n";
+
+    for (int t = 1; t <= cs; ++t) {
+        // take fish
+        for (int i = 1; i <= rs; ++i) {
+            if (mp[i][t]) {
+                rst += v[mp[i][t]].z;
+                v[mp[i][t]].z = 0;
+                mp[i][t] = 0;
                 break;
             }
+        }
 
-        // 3. Shark Move
-        vector<vector<int>> N_MAP(R + 1, vector<int>(C + 1, 0));
-        for (int i = 1; i <= R; ++i) {
-            for (int j = 1; j <= C; ++j) {
-                if (MAP[i][j] > 0) {
-                    int index = MAP[i][j];
-                    auto& [s, d, z] = SHARK[index];
+        int nmp[102][102];
+        memset(nmp, 0, sizeof(nmp));
+        // move fish
+        for (int i = 1; i < v.size(); ++i) {
+            if (v[i].z) {
+                int way = convert[v[i].d];
+                int ny = v[i].y + (dy[way] * v[i].s);
+                int nx = v[i].x + (dx[way] * v[i].s);
 
-                    // MOVE
-                    int way = CONVERT[d];
-                    int next_i = i + (OFFSET_Y[way] * s);
-                    int next_j = j + (OFFSET_X[way] * s);
-
-                    while (next_i < 1 || R < next_i) {
-                        if (next_i < 1) {
-                            next_i = ((next_i - 1) * -1) + 1;
-                        } else if (R < next_i) {
-                            next_i = ((R - (next_i - R)));
-                        }
-
-                        way = (way + 2) % 4;
-                    }
-                    while (next_j < 1 || C < next_j) {
-                        if (next_j < 1) {
-                            next_j = ((next_j - 1) * -1) + 1;
-                        } else if (C < next_j) {
-                            next_j = ((C - (next_j - C)));
-                        }
-
-                        way = (way + 2) % 4;
-                    }
-
-                    d = REVERSE[way];
-
-                    // PREVIOUS SHARK ALREADY EXIST
-                    if (N_MAP[next_i][next_j] > 0) {
-                        int previous_shark_index = N_MAP[next_i][next_j];
-                        int current_shark_index = index;
-
-                        if (get<2>(SHARK[previous_shark_index]) < get<2>(SHARK[current_shark_index]))
-                            N_MAP[next_i][next_j] = index;
-
-                    } else
-                        N_MAP[next_i][next_j] = index;
+                while (ny < 1 || rs < ny) {
+                    if (ny < 1) {
+                        ny = ((ny - 1) * -1) + 1;
+                    } else if (rs < ny)
+                        ny = ((rs - (ny - rs)));
+                    way = (way + 2) % 4;
                 }
+                while (nx < 1 || cs < nx) {
+                    if (nx < 1) {
+                        nx = ((nx - 1) * -1) + 1;
+                    } else if (cs < nx)
+                        nx = ((cs - (nx - cs)));
+                    way = (way + 2) % 4;
+                }
+
+                v[i].d = revers[way];
+                v[i].y = ny;
+                v[i].x = nx;
+
+                if (nmp[ny][nx] > 0) {
+                    if (v[i].z > v[nmp[ny][nx]].z) {
+                        v[nmp[ny][nx]].z = 0;
+                    } else {
+                        v[i].z = 0;
+                        continue;
+                    }
+                }
+                nmp[ny][nx] = i;
             }
         }
-        MAP.assign(N_MAP.begin(), N_MAP.end());
 
-        // //Debug
-        // printf("t : %d\n", t);
-        // for (int i = 1; i <= R; ++i) {
-        //     for (int j = 1; j <= C; ++j){
-        //         printf("%2d ", MAP[i][j]);
-        //     }
-        //     printf("\n");
+        memcpy(mp, nmp, sizeof(mp));
+
+        // // debug
+        // cout << "낚 : " << t << "\n";
+        // for (int i = 1; i <= rs; i++) {
+        //     for (int j = 1; j <= cs; ++j) cout << mp[i][j] << " ";
+        //     cout << "\n";
         // }
-        // printf("\n\n");
+        // cout << "\n\n";
     }
-
-    cout << shark_get << "\n";
-
+    cout << rst;
     return 0;
 }
