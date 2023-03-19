@@ -1,124 +1,78 @@
-/*
-@Title		: 백준
-@Name		: 드래곤 커브
-@First0		: 21.02.11
-@Revision1	: 
-@ETC		: G4
-항상 Top이 최신 코드
-*/
-
-#define	__BACKJOON_15685__	1		//21.02.11	//드래곤 커브
-
-#if __BACKJOON_15685__
-
-//0
-#if 1
 #include <iostream>
-#include <stack>
 #include <vector>
-#include <cstring>
+
 using namespace std;
-using Command = struct _Command {
-	int i;
-	int j;
-	int d;
-	int g;
-	_Command(int i, int j, int d, int g) :i(i), j(j), d(d), g(g) {}
+
+struct A {
+    int x;
+    int y;
+    int d;
+    int g;
 };
 
-int RESULT;
-int N;
-int MAP[101][101];
-int DIR_I[4] = { 0,-1,0,1 };
-int DIR_J[4] = { 1,0,-1,0 };
-vector<Command> List;
-vector<int> S;
-
-void Debug() {
-	cout << endl << "-----" << endl;
-	for (int i = 0; i < 101; i++) {
-		for (int j = 0; j < 101; j++) {
-			cout << MAP[i][j] << " ";
-		}
-		cout << endl;
-	}
-	cout << "-----" << endl;
-}
-
-int GetSquere() {
-	int RES = 0;
-	for (int i = 0; i < 101 - 1; i++) {
-		for (int j = 0; j < 101 - 1; j++) {
-			if (MAP[i][j] && MAP[i][j + 1] && MAP[i + 1][j] && MAP[i + 1][j + 1]) RES++;
-		}
-	}
-	return RES;
-}
-
-void Sol(int I, int J, int cnt, int gen) {
-	if (cnt == gen + 1) {
-
-		while (!S.empty()) S.pop_back();
-		return;
-	}
-
-
-	if (cnt == 0) {
-		int nI = I + DIR_I[S[0]];
-		int nJ = J + DIR_J[S[0]];
-		MAP[I][J] = 1;
-		MAP[nI][nJ] = 1;
-		Sol(nI, nJ, cnt + 1, gen);
-	}
-	else {
-		MAP[I][J] = 1;
-
-		int BACKUP_MAP[101][101];
-		memcpy(BACKUP_MAP, MAP, sizeof(MAP));
-
-		int nI = I;
-		int nJ = J;
-		int tmpDir;
-		//int size = S.size() - 1;
-		for (int i = S.size() - 1; i >= 0; i--) {
-			tmpDir = (S[i] + 1) % 4;
-
-			nI = nI + DIR_I[tmpDir];
-			nJ = nJ + DIR_J[tmpDir];
-
-			if (nI < 0 || nI >= 101 || nJ < 0 || nJ >= 101) {
-				memcpy(MAP, BACKUP_MAP, sizeof(MAP));
-				while (!S.empty()) S.pop_back();
-				return;
-			}
-
-			MAP[nI][nJ] = 1;
-			S.push_back(tmpDir);
-		}
-		//Debug();
-		Sol(nI, nJ, cnt + 1, gen);
-	}
-}
-
+vector<struct A> in;
+int dy[4] = {0, -1, 0, 1};
+int dx[4] = {1, 0, -1, 0};
+int n;
+int rst;
+int mp[104][104];
 
 int main() {
-	cin >> N;
-	for (int i = 0; i < N; i++) {
-		int x, y, d, g;
-		cin >> x >> y >> d >> g;
-		List.push_back(_Command(y, x, d, g));
-	}
+    cin >> n;
+    in.resize(n);
+    for (int i = 0; i < n; ++i) cin >> in[i].x >> in[i].y >> in[i].d >> in[i].g;
 
-	for (int i = 0; i < List.size(); i++) {
-		S.clear();
-		S.push_back(List[i].d);
-		Sol(List[i].i, List[i].j, 0, List[i].g);
-	}
-	RESULT = GetSquere();
-	cout << RESULT;
+    int dbg = 1;
+    for (auto it : in) {
+        int y = it.y;
+        int x = it.x;
+        int g = it.g;
+        int d = it.d;
+        int ny = y + dy[d];
+        int nx = x + dx[d];
+        int top = 1;
 
-	return 0;
+        vector<struct A> v;
+        v.push_back({x, y, d, g});
+        v.push_back({nx, ny, -1, 0});
+        mp[y][x] = 1;
+        mp[ny][nx] = 1;
+        // if (dbg == 2) {
+        //     cout << y << " , " << x << "\n";
+        //     cout << ny << " , " << nx << "\n";
+        // }
+
+        for (int c = 0; c < g; ++c) {
+            for (int cg = top - 1; cg >= 0; cg--) {
+                int nd = (v[cg].d + 1) % 4;
+                ny = ny + dy[nd];
+                nx = nx + dx[nd];
+                v[top++].d = nd;
+
+                // if (dbg == 2) {
+                //     cout << c << ", " << nd << "\n";
+                //     cout << ny << ", " << nx << "\n\n";
+                // }
+
+                v.push_back({nx, ny, -1, 0});
+                mp[ny][nx] = 1;
+            }
+        }
+
+        // // debug
+        // cout << dbg << "\n";
+        // dbg++;
+        // for (int i = 0; i <= 10; ++i) {
+        //     for (int j = 0; j <= 10; ++j) cout << mp[i][j] << " ";
+        //     cout << "\n";
+        // }
+        // cout << "\n\n";
+    }
+
+    for (int i = 0; i <= 100; i++) {
+        for (int j = 0; j <= 100; ++j)
+            if (mp[i][j] && mp[i + 1][j] && mp[i][j + 1] && mp[i + 1][j + 1]) rst++;
+    }
+    cout << rst;
+    return 0;
 }
-#endif
-
-#endif
