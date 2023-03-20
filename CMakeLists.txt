@@ -195,7 +195,7 @@ add_executable(backjoon-16234 backjoon/16234-MovePopulation.cpp) # 21.02.27	#인
 add_executable(backjoon-16235 backjoon/16235-ZaetechTree.cpp) # 21.03.18	#나무 재태크
 add_executable(backjoon-9251 backjoon/9251-LCS.cc) # 22.03.01 #LCS
 add_executable(backjoon-12865 backjoon/12865-OrdinaryBackpack.cc) # 22.03.05 #평범한 배낭
-add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc) # 22.03.01 #연속합
+add_executable(backjoon-1912 backjoon/1912-ContinuousSum.cc) # 22.03.01 #연속합 #(Renew1 23.03.20)
 add_executable(backjoon-1003 backjoon/1003-fibonazzi_function.cc) # 22.03.12 #fibonazzi 함수
 add_executable(backjoon-15649 backjoon/15649-NandM.cc) # 22.03.13
 add_executable(backjoon-15650 backjoon/15650-NandM_2.cc) # 22.03.13
@@ -328,3 +328,4 @@ add_executable(backjoon-3273 backjoon/3273-SumOfTwoNumber.cc) # 23.03.09        
 add_executable(backjoon-1700 backjoon/1700-MultitabSchedualing.cc) # 23.03.09                #멀티탭 스케줄링 #(Renew1 23.03.09)
 add_executable(backjoon-17406 backjoon/17406-RotateArray4.cc) # 23.03.12    #배열 돌리기4
 add_executable(backjoon-17825 backjoon/17825-DiceYut.cc) # 23.03.18    #주사위 윳놀이(못품)
+add_executable(backjoon-2632 backjoon/2632-SellingPizza.cc) # 23.03.20    #피자판매(못품)
