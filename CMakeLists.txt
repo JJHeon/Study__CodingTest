@@ -260,7 +260,7 @@ add_executable(backjoon-17140 backjoon/17140-2DimensionArrayAndCalulate.cc) # 22
 add_executable(backjoon-17142 backjoon/17142-Lab3.cc) # 22.10.20                #연구소 3
 add_executable(backjoon-17779 backjoon/17779-GeryMendering.cc) # 22.10.24                #게리맨더링 2
 add_executable(backjoon-17837 backjoon/17837-NewGame2.cc) # 22.10.26                #새로운 게임 2
-add_executable(backjoon-17822 backjoon/17822-RotateDisk.cc) # 22.11.10                #원판 돌리기
+add_executable(backjoon-17822 backjoon/17822-RotateDisk.cc) # 22.11.10                #원판 돌리기 #(Renew1 23.03.20)
 add_executable(backjoon-4179 backjoon/4179-Fire.cc) # 23.01.04                #불 #(Renew1 23.01.09)
 add_executable(backjoon-15686V2 backjoon/15686-DeliveryChickenV2.cc) # 23.01.10                #불
 add_executable(backjoon-2636 backjoon/2636-Cheese.cc) # 23.01.13                #치즈
@@ -329,3 +329,4 @@ add_executable(backjoon-1700 backjoon/1700-MultitabSchedualing.cc) # 23.03.09   
 add_executable(backjoon-17406 backjoon/17406-RotateArray4.cc) # 23.03.12    #배열 돌리기4
 add_executable(backjoon-17825 backjoon/17825-DiceYut.cc) # 23.03.18    #주사위 윳놀이(못품)
 add_executable(backjoon-2632 backjoon/2632-SellingPizza.cc) # 23.03.20    #피자판매(못품)
+add_executable(backjoon-2170 backjoon/2170-DrawLine.cc) # 23.03.21    #선긋기
