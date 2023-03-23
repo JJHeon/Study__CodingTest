@@ -330,3 +330,4 @@ add_executable(backjoon-17406 backjoon/17406-RotateArray4.cc) # 23.03.12    #배
 add_executable(backjoon-17825 backjoon/17825-DiceYut.cc) # 23.03.18    #주사위 윳놀이(못품)
 add_executable(backjoon-2632 backjoon/2632-SellingPizza.cc) # 23.03.20    #피자판매(못품)
 add_executable(backjoon-2170 backjoon/2170-DrawLine.cc) # 23.03.21    #선긋기
+add_executable(backjoon-2792 backjoon/2792-JewelCase.cc) # 23.03.23    #보석 상자(못품)
